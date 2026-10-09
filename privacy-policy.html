@@ -16,7 +16,7 @@
 
 <h1>ImFine — Privacy Policy</h1>
 <p class="meta">Effective date: October 7, 2026 &nbsp;|&nbsp; App: ImFine (com.imfine.app)</p>
-<div class="lang-switch"><a href="#en">English</a><a href="#zh">简体中文</a></div>
+<div class="lang-switch"><a href="#en">English</a><a href="#zh">简体中文</a><a href="#ar">العربية</a><a href="#de">Deutsch</a><a href="#da">Dansk</a><a href="#fi">Suomi</a><a href="#es">Español</a><a href="#hi">हिन्दी</a><a href="#fr">Français</a><a href="#ko">한국어</a><a href="#ja">日本語</a><a href="#it">Italiano</a><a href="#nb">Norsk Bokmål</a><a href="#nl">Nederlands</a><a href="#pt">Português</a><a href="#sv">Svenska</a><a href="#th">ไทย</a><a href="#vi">Tiếng Việt</a><a href="#ur">اردو</a></div>
 
 <!-- ============ ENGLISH ============ -->
 <h2 id="en">English</h2>
@@ -127,6 +127,941 @@
 
 <h3>9. 联系方式</h3>
 <p>如有问题或请求：<strong>jamesxu1026@gmail.com</strong>。</p>
+
+<!-- ============ ARABIC ============ -->
+<h2 id="ar">العربية</h2>
+
+<p><strong>الملخّص في جملة واحدة:</strong> يعمل ImFine بالكامل على جهازك. لا تصل جهات اتصال الطوارئ لديك وسجلّات تسجيل الدخول وإعداداتك إلى المطوّر مطلقًا — فهي مخزّنة مشفّرة على هاتفك ولا يتم إرسالها <em>إلّا بواسطتك، عبر قنواتك الخاصة</em> (حساب بريدك الإلكتروني، مفتاح واجهة برمجة تطبيقات البريد الإلكتروني الخاص بك، رسائلك النصية القصيرة، أو روابط Webhook لروبوتات المجموعات الخاصة بك).</p>
+
+<h3>1. من نحن</h3>
+<p>تم تطوير وتشغيل ImFine ("التطبيق") كمنتج برمجي مستقل. لأسئلة الخصوصية، تواصل مع: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. البيانات التي لا نجمعها</h3>
+<ul>
+  <li>لا نقوم بتشغيل أي خادم يخزّن بياناتك.</li>
+  <li>لا نقوم بجمع أو نقل أو بيع أو مشاركة بياناتك الشخصية أو جهات الاتصال أو سجل تسجيل الدخول أو موقعك.</li>
+  <li>لا نحتوي على أي حزم تطوير برمجية (SDK) للإعلانات ولا أي حزم تطوير للإحصاءات/التتبّع.</li>
+</ul>
+
+<h3>3. البيانات المخزّنة على جهازك</h3>
+<p>تبقى البيانات التالية على جهازك فقط، وهي مشفّرة في حالة السكون:</p>
+<ul>
+  <li><strong>جهات اتصال الطوارئ</strong> (الأسماء، رسائل البريد/الهواتف التي تُدخلها) — مخزّنة في قاعدة بيانات مشفّرة بتقنية AES-256 (SQLCipher).</li>
+  <li><strong>الإعدادات وقوالب الرسائل</strong> — مخزّنة في تخزين مشفّر مدعوم بـ Android Keystore (EncryptedSharedPreferences).</li>
+  <li><strong>سجلّات تسجيل الدخول وسجل التنبيهات</strong> — مخزّنة محليًا.</li>
+  <li><strong>مفاتيح واجهة برمجة التطبيقات الاختيارية</strong> (مثل مفتاح واجهة برمجة تطبيقات بريد Resend.com، أو مفاتيح الدفع التي تختار حفظها) — مخزّنة مشفّرة على الجهاز وتُستخدم فقط لإرسال التنبيهات إلى <em>المستلمين الذين حددتهم</em>.</li>
+</ul>
+<p>يمكنك حذف جميعها في أي وقت عبر <em>الإعدادات → الخصوصية وإخلاء المسؤولية → حذف جميع بياناتي</em>، أو بإلغاء تثبيت التطبيق.</p>
+
+<h3>4. البيانات المرسلة من قبلك، عبر حساباتك الخاصة</h3>
+<p>عند تشغيل تنبيه، يقوم التطبيق بإنشاء وإرسال رسالة باستخدام القنوات التي قمت <em>أنت</em> بتكوينها. لا يطّلع المطوّر على هذا المرور:</p>
+<ul>
+  <li><strong>البريد الإلكتروني عبر تطبيق البريد على جهازك</strong>: مسار البريد القياسي لجهازك، محكوم بسياسة خصوصية مزوّد خدمة البريد الإلكتروني الخاص بك.</li>
+  <li><strong>البريد الإلكتروني عبر Resend (اختياري)</strong>: يتم إرسال الرسالة من حساب Resend الخاص بك باستخدام مفتاح API الخاص بك، إلى المستلمين الذين أدخلتهم. يعالج Resend هذا النقل بموجب <a href="https://resend.com/privacy">سياسة خصوصية Resend</a>.</li>
+  <li><strong>الرسائل النصية القصيرة (اختياري، النسخة الاحترافية)</strong>: يتم إرسالها بواسطة جهازك ومشغّلك كما لو كنت أنت من إرسلها.</li>
+  <li><strong>روابط Webhook لروبوتات المجموعات (اختياري، النسخة الاحترافية)</strong>: تذهب الرسائل مباشرة إلى عناوين URL لـ Webhook التي قمت بتكوينها (مثل تكامل البوت الخاص بك).</li>
+</ul>
+<p>مستلمو التنبيهات هم الأشخاص الذين أضفتهم صراحة كجهات اتصال للطوارئ. تأكد من أنهم يتوقعون استقبال مثل هذه الرسائل.</p>
+
+<h3>5. الأذونات</h3>
+<ul>
+  <li><strong>الإنترنت</strong> — مطلوب لإرسال رسائل/روابط Webhook التنبيه عبر القنوات التي قمت بتكوينها.</li>
+  <li><strong>الإشعارات</strong> — تذكيرات تسجيل الدخول وتأكيدات التنبيه.</li>
+  <li><strong>المنبّهات والتذكيرات (منبّه دقيق)</strong> — لإطلاق تذكيرات تسجيل الدخول في الوقت المحدد.</li>
+  <li><strong>الرسائل النصية القصيرة (اختياري)</strong> — فقط في حال قمت بتمكين إرسال الرسائل النصية.</li>
+</ul>
+
+<h3>6. المشتريات</h3>
+<p>تتم معالجة الاشتراكات والمشتريات لمرة واحدة بالكامل بواسطة <strong>مدفوعات Google Play</strong>. لا يتلقى المطوّر أو يخزّن تفاصيل الدفع الخاصة بك. يعالج Google بيانات شرائك بموجب <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a>. يتحقق التطبيق من حالة الشراء مع Google Play فقط لفتح ميزات النسخة الاحترافية (ولإعادة قفلها مرة أخرى في حال استرداد أو إلغاء الشراء).</p>
+
+<h3>7. الأطفال</h3>
+<p>التطبيق غير موجّه للأطفال تحت 13 عامًا ولا يجمع عمدًا أي بيانات من أي شخص، بما في ذلك الأطفال.</p>
+
+<h3>8. التغييرات</h3>
+<p>في حال تغيّرت هذه السياسة، سيتم نشر النسخة الجديدة على هذا العنوان مع تحديث تاريخ السريان.</p>
+
+<h3>9. التواصل</h3>
+<p>للأسئلة أو الطلبات: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ GERMAN ============ -->
+<h2 id="de">Deutsch</h2>
+
+<p><strong>Zusammenfassung in einem Satz:</strong> ImFine arbeitet vollständig auf Ihrem Gerät. Ihre Notfallkontakte, Check-in-Aufzeichnungen und Einstellungen erreichen den Entwickler niemals — sie werden verschlüsselt auf Ihrem Telefon gespeichert und <em>ausschließlich von Ihnen über Ihre eigenen Kanäle</em> (Ihr E-Mail-Konto, Ihren E-Mail-API-Schlüssel, Ihre SMS oder Ihre eigenen Gruppen-Bot-Webhooks) gesendet.</p>
+
+<h3>1. Wer wir sind</h3>
+<p>ImFine („die App") wird als unabhängiges Softwareprodukt entwickelt und betrieben. Bei Fragen zum Datenschutz kontaktieren Sie: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Daten, die wir NICHT erfassen</h3>
+<ul>
+  <li>Wir betreiben keinen Server, der Ihre Daten speichert.</li>
+  <li>Wir erfassen, übertragen, verkaufen oder teilen keine personenbezogenen Daten, Kontakte, Check-in-Verläufe oder Standorte.</li>
+  <li>Wir verwenden keine Werbe-SDKs und keine Analytics-/Tracking-SDKs.</li>
+</ul>
+
+<h3>3. Auf Ihrem Gerät gespeicherte Daten</h3>
+<p>Folgendes verbleibt ausschließlich auf Ihrem Gerät und wird verschlüsselt gespeichert:</p>
+<ul>
+  <li><strong>Notfallkontakte</strong> (Namen, eingegebene E-Mails/Telefonnummern) — gespeichert in einer AES-256-verschlüsselten Datenbank (SQLCipher).</li>
+  <li><strong>Einstellungen und Nachrichtenvorlagen</strong> — gespeichert in Android-Keystore-gestützter verschlüsselter Speicherung (EncryptedSharedPreferences).</li>
+  <li><strong>Check-in-Aufzeichnungen und Warnungsverlauf</strong> — lokal gespeichert.</li>
+  <li><strong>Optionale API-Schlüssel</strong> (z. B. ein Resend.com-E-Mail-API-Schlüssel oder Push-Schlüssel, die Sie speichern möchten) — verschlüsselt auf dem Gerät gespeichert und nur verwendet, um Warnungen an <em>Ihre ausgewählten Empfänger</em> zu senden.</li>
+</ul>
+<p>Sie können all dies jederzeit über <em>Einstellungen → Datenschutz &amp; Haftungsausschluss → Alle meine Daten löschen</em> löschen oder durch Deinstallieren der App.</p>
+
+<h3>4. Von Ihnen über Ihre eigenen Konten gesendete Daten</h3>
+<p>Wenn eine Warnung ausgelöst wird, erstellt und sendet die App eine Nachricht über die Kanäle, die <em>Sie</em> konfiguriert haben. Der Entwickler sieht diesen Datenverkehr niemals:</p>
+<ul>
+  <li><strong>E-Mail über Ihre Geräte-Mail-App</strong>: der Standard-E-Mail-Ablauf Ihres Geräts, geregelt durch die Datenschutzrichtlinie Ihres E-Mail-Anbieters.</li>
+  <li><strong>E-Mail über Resend (optional)</strong>: Die Nachricht wird von Ihrem eigenen Resend-Konto mit Ihrem eigenen API-Schlüssel an die von Ihnen eingegebenen Empfänger gesendet. Resend verarbeitet diese Übertragung gemäß der <a href="https://resend.com/privacy">Datenschutzrichtlinie von Resend</a>.</li>
+  <li><strong>SMS (optional, Pro)</strong>: von Ihrem Gerät und Netzbetreiber gesendet, als ob Sie sie selbst gesendet hätten.</li>
+  <li><strong>Gruppen-Bot-Webhooks (optional, Pro)</strong>: Nachrichten gehen direkt an die von Ihnen konfigurierten Webhook-URLs (z. B. Ihre eigene Bot-Integration).</li>
+</ul>
+<p>Die Empfänger von Warnungen sind Personen, die Sie ausdrücklich als Notfallkontakte hinzugefügt haben. Stellen Sie sicher, dass diese den Empfang solcher Nachrichten erwarten.</p>
+
+<h3>5. Berechtigungen</h3>
+<ul>
+  <li><strong>Internet</strong> — erforderlich, um Warnungs-E-Mails/Webhooks über Ihre konfigurierten Kanäle zu senden.</li>
+  <li><strong>Benachrichtigungen</strong> — Check-in-Erinnerungen und Warnungsbestätigungen.</li>
+  <li><strong>Wecker &amp; Erinnerungen (genauer Wecker)</strong> — damit Check-in-Erinnerungen zur konfigurierten Zeit ausgelöst werden.</li>
+  <li><strong>SMS (optional)</strong> — nur wenn Sie die SMS-Zustellung aktivieren.</li>
+</ul>
+
+<h3>6. Käufe</h3>
+<p>Abonnements und Einmalkäufe werden vollständig über <strong>Google Play Payments</strong> abgewickelt. Der Entwickler erhält oder speichert Ihre Zahlungsdetails nicht. Google verarbeitet Ihre Kaufdaten gemäß der <a href="https://policies.google.com/privacy">Google-Datenschutzrichtlinie</a>. Die App verifiziert Ihren Kaufstatus bei Google Play ausschließlich, um Pro-Funktionen freizuschalten (und sie wieder zu sperren, falls ein Kauf erstattet oder storniert wird).</p>
+
+<h3>7. Kinder</h3>
+<p>Die App richtet sich nicht an Kinder unter 13 Jahren und erfasst wissentlich keine Daten von irgendjemandem, einschließlich Kindern.</p>
+
+<h3>8. Änderungen</h3>
+<p>Sollte sich diese Richtlinie ändern, wird die neue Version unter dieser URL mit einem aktualisierten Wirksamkeitsdatum veröffentlicht.</p>
+
+<h3>9. Kontakt</h3>
+<p>Fragen oder Anfragen: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ DANISH ============ -->
+<h2 id="da">Dansk</h2>
+
+<p><strong>Resumé på én sætning:</strong> ImFine fungerer udelukkende på din enhed. Dine nødkontakter, check-in-optegnelser og indstillinger når aldrig udvikleren — de er gemt krypteret på din telefon og sendes <em>kun af dig gennem dine egne kanaler</em> (din e-mailkonto, din e-mail-API-nøgle, din SMS eller dine egne gruppebot-webhooks).</p>
+
+<h3>1. Hvem vi er</h3>
+<p>ImFine ("Appen") er udviklet og drives som et uafhængigt softwareprodukt. Ved spørgsmål om privatliv kontakt: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Data vi IKKE indsamler</h3>
+<ul>
+  <li>Vi driver ingen server, der gemmer dine data.</li>
+  <li>Vi indsamler, overfører, sælger eller deler ikke dine persondata, kontakter, check-in-historik eller placering.</li>
+  <li>Vi har ingen reklame-SDK'er og ingen analyse-/sporings-SDK'er.</li>
+</ul>
+
+<h3>3. Data gemt på din enhed</h3>
+<p>Følgende forbliver udelukkende på din enhed og er krypteret i hvile:</p>
+<ul>
+  <li><strong>Nødkontakter</strong> (navne, indtastede e-mails/telefoner) — gemt i en AES-256-krypteret database (SQLCipher).</li>
+  <li><strong>Indstillinger og meddelelsesskabeloner</strong> — gemt i Android Keystore-understøttet krypteret lagring (EncryptedSharedPreferences).</li>
+  <li><strong>Check-in-optegnelser og advarselshistorik</strong> — gemt lokalt.</li>
+  <li><strong>Valgfrie API-nøgler</strong> (f.eks. en Resend.com e-mail-API-nøgle eller push-nøgler, du vælger at gemme) — gemt krypteret på enheden og kun brugt til at sende advarsler til <em>dine valgte modtagere</em>.</li>
+</ul>
+<p>Du kan slette det hele til enhver tid via <em>Indstillinger → Privatliv og ansvarsfraskrivelse → Slet alle mine data</em> eller ved at afinstallere appen.</p>
+
+<h3>4. Data sendt af dig gennem dine egne konti</h3>
+<p>Når en advarsel udløses, opretter og sender appen en meddelelse ved hjælp af kanaler, <em>du</em> har konfigureret. Udvikleren ser aldrig denne trafik:</p>
+<ul>
+  <li><strong>E-mail via din enheds e-mailapp</strong>: din enheds standard-e-mailproces, reguleret af din e-mailudbyders privatlivspolitik.</li>
+  <li><strong>E-mail via Resend (valgfrit)</strong>: meddelelsen sendes fra din egen Resend-konto ved hjælp af din egen API-nøgle til modtagere, du har indtastet. Resend behandler denne overførelse under <a href="https://resend.com/privacy">Resends privatlivspolitik</a>.</li>
+  <li><strong>SMS (valgfrit, Pro)</strong>: sendt af din enhed og udbyder som om du selv sendte den.</li>
+  <li><strong>Gruppebot-webhooks (valgfrit, Pro)</strong>: meddelelser går direkte til de webhook-URL'er, du har konfigureret (f.eks. din egen bot-integration).</li>
+</ul>
+<p>Modtagerne af advarsler er personer, du udtrykkeligt har tilføjet som nødkontakter. Sørg for, at de forventer at modtage sådanne meddelelser.</p>
+
+<h3>5. Tilladelser</h3>
+<ul>
+  <li><strong>Internet</strong> — nødvendig for at sende advarsels-e-mails/webhooks gennem dine konfigurerede kanaler.</li>
+  <li><strong>Meddelelser</strong> — check-in-påmindelser og advarselbekræftelser.</li>
+  <li><strong>Alarmer og påmindelser (præcis alarm)</strong> — så check-in-påmindelser udløses på det konfigurerede tidspunkt.</li>
+  <li><strong>SMS (valgfrit)</strong> — kun hvis du aktiverer SMS-levering.</li>
+</ul>
+
+<h3>6. Køb</h3>
+<p>Abonnementer og engangskøb behandles udelukkende af <strong>Google Play Payments</strong>. Udvikleren modtager eller gemmer ikke dine betalingsoplysninger. Google håndterer dine købsdata under <a href="https://policies.google.com/privacy">Googles privatlivspolitik</a>. Appen verificerer din købsstatus hos Google Play udelukkende for at låse Pro-funktioner op (og for at låse dem igen, hvis et køb refunderes eller annulleres).</p>
+
+<h3>7. Børn</h3>
+<p>Appen er ikke rettet mod børn under 13 år og indsamler ikke bevidst data fra nogen, herunder børn.</p>
+
+<h3>8. Ændringer</h3>
+<p>Hvis denne politik ændres, vil den nye version blive offentliggjort på denne URL med en opdateret ikrafttrædelsesdato.</p>
+
+<h3>9. Kontakt</h3>
+<p>Spørgsmål eller anmodninger: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ FINNISH ============ -->
+<h2 id="fi">Suomi</h2>
+
+<p><strong>Tiivistelmä yhdessä lauseessa:</strong> ImFine toimii kokonaan laitteellasi. Hätäyhteystietosi, sisäänkirjautumistietueesi ja asetuksesi eivät koskaan pääse kehittäjälle — ne on tallennettu salattuna puhelimeesi ja lähetetään <em>vain sinun toimestasi omien kanaviesi kautta</em> (sähköpostitilisi, sähköpostin API-avaimesi, tekstiviestisi tai omat ryhmärobottien webkutsusi).</p>
+
+<h3>1. Keitä olemme</h3>
+<p>ImFine ("sovellus") kehitetään ja ylläpidetään itsenäisenä ohjelmistotuotteena. Yksityisyyttä koskevissa kysymyksissä ota yhteyttä: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Tietoja, joita emme kerää</h3>
+<ul>
+  <li>Emme ylläpidä palvelinta, joka tallentaa tietojasi.</li>
+  <li>Emme kerää, lähetä, myy tai jaa henkilökohtaisia tietojasi, yhteystietojasi, sisäänkirjautumishistoriaasi tai sijaintiasi.</li>
+  <li>Meillä ei ole mainos-SDK:ita eikä analytiikka- tai seurantakirjastoja.</li>
+</ul>
+
+<h3>3. Laitteellesi tallennetut tiedot</h3>
+<p>Seuraavat jäävät vain laitteellesi ja ne on salattu lepotilassa:</p>
+<ul>
+  <li><strong>Hätäyhteystiedot</strong> (nimet, antamasi sähköpostit/puhelinnumerot) — tallennettu AES-256-salattuun tietokantaan (SQLCipher).</li>
+  <li><strong>Asetukset ja viestipohjat</strong> — tallennettu Android Keystore -salattuun tallennustilaan (EncryptedSharedPreferences).</li>
+  <li><strong>Sisäänkirjautumistietueet ja hälytyshistoria</strong> — tallennettu paikallisesti.</li>
+  <li><strong>Valinnaiset API-avaimet</strong> (esim. Resend.com-sähköpostin API-avain tai tallentamasi push-avaimet) — tallennettu salattuna laitteella ja käytetään vain hälytysten lähettämiseen <em>valitsemillesi vastaanottajille</em>.</li>
+</ul>
+<p>Voit poistaa kaiken milloin tahansa kohdasta <em>Asetukset → Yksityisyys ja vastuuvapauslauseke → Poista kaikki tietoni</em> tai poistamalla sovelluksen.</p>
+
+<h3>4. Sinun omien tiliesi kautta lähettämäsi tiedot</h3>
+<p>Kun hälytys laukaistaan, sovellus laatii ja lähettää viestin käyttäen kanavia, jotka <em>sinä</em> olet määrittänyt. Kehittäjä ei koskaan näe tätä liikennettä:</p>
+<ul>
+  <li><strong>Sähköposti laitteen sähköpostisovelluksen kautta</strong>: laitteesi vakio-sähköpostivirta, jota sääntelee sähköpostipalveluntarjoajasi yksityisyyskäytäntö.</li>
+  <li><strong>Sähköposti Resendin kautta (valinnainen)</strong>: viesti lähetetään omasta Resend-tilistäsi käyttäen omaa API-avaintasi antamillesi vastaanottajille. Resend käsittelee tämän siirron <a href="https://resend.com/privacy">Resendin yksityisyyskäytännön</a> mukaisesti.</li>
+  <li><strong>Tekstiviesti (valinnainen, Pro)</strong>: laitteesi ja operaattorisi lähettämä, aivan kuin olisit lähettänyt sen itse.</li>
+  <li><strong>Ryhmärobottien webkutsut (valinnainen, Pro)</strong>: viestit menevät suoraan määrittämiisi webhook-osoitteisiin (esim. oma robotti-integraatiosi).</li>
+</ul>
+<p>Hälytysten vastaanottajat ovat henkilöitä, jotka olet nimenomaisesti lisännyt hätäyhteystiedoiksi. Varmista, että he odottavat saavansa tällaisia viestejä.</p>
+
+<h3>5. Käyttöoikeudet</h3>
+<ul>
+  <li><strong>Internet</strong> — vaaditaan hälytyssähköpostien/webhookien lähettämiseen määrittämiesi kanavien kautta.</li>
+  <li><strong>Ilmoitukset</strong> — sisäänkirjautumismuistutukset ja hälytysvahvistukset.</li>
+  <li><strong>Hälytykset ja muistutukset (tarkka hälytys)</strong> — jotta sisäänkirjautumismuistutukset laukaistaan määritettynä ajankohtana.</li>
+  <li><strong>Tekstiviesti (valinnainen)</strong> — vain, jos otat tekstiviestitoimituksen käyttöön.</li>
+</ul>
+
+<h3>6. Ostot</h3>
+<p>Tilaukset ja kertamaksut käsittelee kokonaan <strong>Google Play Payments</strong>. Kehittäjä ei vastaanota tai tallenna maksutietojasi. Google käsittelee ostotietosi <a href="https://policies.google.com/privacy">Googlen yksityisyyskäytännön</a> mukaisesti. Sovellus tarkistaa ostostilasi Google Playn kanssa yksinomaan Pro-ominaisuuksien lukituksen avaamiseksi (ja lukitsemiseksi uudelleen, jos ostos palautetaan tai peruutetaan).</p>
+
+<h3>7. Lapset</h3>
+<p>Sovellus ei ole suunnattu alle 13-vuotiaille lapsille eikä se tietoisesti kerää tietoja keltään, mukaan lukien lapsilta.</p>
+
+<h3>8. Muutokset</h3>
+<p>Jos tämä käytäntö muuttuu, uusi versio julkaistaan tässä osoitteessa päivitetyllä voimaantulopäivällä.</p>
+
+<h3>9. Yhteystiedot</h3>
+<p>Kysymykset tai pyynnöt: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ SPANISH ============ -->
+<h2 id="es">Español</h2>
+
+<p><strong>Resumen en una frase:</strong> ImFine funciona completamente en tu dispositivo. Tus contactos de emergencia, registros de check-in y ajustes nunca llegan al desarrollador — se almacenan cifrados en tu teléfono y son enviados <em>únicamente por ti, a través de tus propios canales</em> (tu cuenta de correo, tu clave de API de correo, tu SMS, o tus propios webhooks de bots de grupo).</p>
+
+<h3>1. Quiénes somos</h3>
+<p>ImFine ("la App") se desarrolla y opera como un producto de software independiente. Para consultas de privacidad, contacta: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Datos que NO recopilamos</h3>
+<ul>
+  <li>No operamos ningún servidor que almacene tus datos.</li>
+  <li>No recopilamos, transmitimos, vendemos ni compartimos tus datos personales, contactos, historial de check-in o ubicación.</li>
+  <li>No tenemos SDKs de publicidad ni SDKs de analítica/seguimiento.</li>
+</ul>
+
+<h3>3. Datos almacenados en tu dispositivo</h3>
+<p>Lo siguiente permanece únicamente en tu dispositivo y está cifrado en reposo:</p>
+<ul>
+  <li><strong>Contactos de emergencia</strong> (nombres, correos/teléfonos que ingresas) — almacenados en una base de datos cifrada con AES-256 (SQLCipher).</li>
+  <li><strong>Ajustes y plantillas de mensajes</strong> — almacenados en almacenamiento cifrado respaldado por Android Keystore (EncryptedSharedPreferences).</li>
+  <li><strong>Registros de check-in e historial de alertas</strong> — almacenados localmente.</li>
+  <li><strong>Claves de API opcionales</strong> (p. ej., una clave de API de correo de Resend.com o claves push que elijas guardar) — almacenadas cifradas en el dispositivo y usadas únicamente para enviar alertas a <em>los destinatarios que elijas</em>.</li>
+</ul>
+<p>Puedes eliminar todo esto en cualquier momento mediante <em>Ajustes → Privacidad y aviso legal → Eliminar todos mis datos</em>, o desinstalando la App.</p>
+
+<h3>4. Datos enviados por ti, a través de tus propias cuentas</h3>
+<p>Cuando se activa una alerta, la App redacta y envía un mensaje usando los canales que <em>tú</em> configuraste. El desarrollador nunca ve este tráfico:</p>
+<ul>
+  <li><strong>Correo electrónico a través de la app de correo de tu dispositivo</strong>: el flujo estándar de correo de tu dispositivo, regido por la política de privacidad de tu proveedor de correo.</li>
+  <li><strong>Correo electrónico a través de Resend (opcional)</strong>: el mensaje se envía desde tu propia cuenta de Resend usando tu propia clave de API, a los destinatarios que ingresaste. Resend procesa esta transmisión bajo la <a href="https://resend.com/privacy">política de privacidad de Resend</a>.</li>
+  <li><strong>SMS (opcional, Pro)</strong>: enviado por tu dispositivo y operador como si tú mismo lo hubieras enviado.</li>
+  <li><strong>Webhooks de bots de grupo (opcional, Pro)</strong>: los mensajes van directamente a las URLs de webhook que configuraste (p. ej., tu propia integración de bot).</li>
+</ul>
+<p>Los destinatarios de las alertas son personas que añadiste explícitamente como contactos de emergencia. Asegúrate de que esperan recibir dichos mensajes.</p>
+
+<h3>5. Permisos</h3>
+<ul>
+  <li><strong>Internet</strong> — necesario para enviar correos/webhooks de alerta a través de tus canales configurados.</li>
+  <li><strong>Notificaciones</strong> — recordatorios de check-in y confirmaciones de alertas.</li>
+  <li><strong>Alarmas y recordatorios (alarma exacta)</strong> — para que los recordatorios de check-in se activen a la hora configurada.</li>
+  <li><strong>SMS (opcional)</strong> — únicamente si habilitas el envío por SMS.</li>
+</ul>
+
+<h3>6. Compras</h3>
+<p>Las suscripciones y las compras únicas se procesan íntegramente mediante <strong>Google Play Payments</strong>. El desarrollador no recibe ni almacena tus datos de pago. Google maneja tus datos de compra bajo la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>. La App verifica tu estado de compra con Google Play únicamente para desbloquear funciones Pro (y volver a bloquearlas si se reembolsa o cancela una compra).</p>
+
+<h3>7. Niños</h3>
+<p>La App no está dirigida a menores de 13 años y no recopila conscientemente datos de nadie, incluidos niños.</p>
+
+<h3>8. Cambios</h3>
+<p>Si esta política cambia, la nueva versión se publicará en esta URL con una fecha de entrada en vigor actualizada.</p>
+
+<h3>9. Contacto</h3>
+<p>Preguntas o solicitudes: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ HINDI ============ -->
+<h2 id="hi">हिन्दी</h2>
+
+<p><strong>एक वाक्य में सारांश:</strong> ImFine पूरी तरह से आपके डिवाइस पर काम करता है। आपके आपातकालीन संपर्क, चेक-इन रिकॉर्ड और सेटिंग्स कभी डेवलपर तक नहीं पहुँचते — वे आपके फोन पर एन्क्रिप्टेड रूप में संग्रहीत हैं और <em>केवल आपके द्वारा, अपने चैनलों</em> (आपका ईमेल खाता, आपकी ईमेल API कुंजी, आपका SMS, या आपके अपने समूह-बॉट वेबहुक) के माध्यम से भेजे जाते हैं।</p>
+
+<h3>1. हम कौन हैं</h3>
+<p>ImFine ("ऐप") एक स्वतंत्र सॉफ़्टवेयर उत्पाद के रूप में विकसित और संचालित किया जाता है। गोपनीयता संबंधी प्रश्नों के लिए संपर्क करें: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. डेटा जो हम एकत्र नहीं करते</h3>
+<ul>
+  <li>हम कोई सर्वर नहीं चलाते जो आपका डेटा संग्रहीत करता हो।</li>
+  <li>हम आपका व्यक्तिगत डेटा, संपर्क, चेक-इन इतिहास या स्थान एकत्र, प्रसारित, बेचते या साझा नहीं करते।</li>
+  <li>हमारे पास कोई विज्ञापन SDK नहीं है और न ही कोई एनालिटिक्स/ट्रैकिंग SDK है।</li>
+</ul>
+
+<h3>3. आपके डिवाइस पर संग्रहीत डेटा</h3>
+<p>निम्नलिखित डेटा केवल आपके डिवाइस पर रहता है और स्थिर अवस्था में एन्क्रिप्टेड है:</p>
+<ul>
+  <li><strong>आपातकालीन संपर्क</strong> (नाम, मास्क किए गए ईमेल/फोन जिन्हें आप दर्ज करते हैं) — AES-256 एन्क्रिप्टेड डेटाबेस (SQLCipher) में संग्रहीत।</li>
+  <li><strong>सेटिंग्स और संदेश टेम्पलेट</strong> — Android Keystore समर्थित एन्क्रिप्टेड स्टोरेज (EncryptedSharedPreferences) में संग्रहीत।</li>
+  <li><strong>चेक-इन रिकॉर्ड और अलर्ट इतिहास</strong> — स्थानीय रूप से संग्रहीत।</li>
+  <li><strong>वैकल्पिक API कुंजियाँ</strong> (जैसे Resend.com ईमेल API कुंजी, या पुश कुंजियाँ जिन्हें आप सहेजना चाहते हैं) — डिवाइस पर एन्क्रिप्टेड संग्रहीत और केवल आपके चुने हुए प्राप्तकर्ताओं को अलर्ट भेजने के लिए उपयोग की जाती हैं।</li>
+</ul>
+<p>आप किसी भी समय <em>सेटिंग्स → गोपनीयता और अस्वीकरण → मेरा सभी डेटा हटाएँ</em> के माध्यम से इसे पूरी तरह हटा सकते हैं, या ऐप को अनइंस्टॉल कर सकते हैं।</p>
+
+<h3>4. आपके द्वारा, अपने खातों के माध्यम से भेजा गया डेटा</h3>
+<p>जब कोई अलर्ट ट्रिगर होता है, तो ऐप <em>आपके</em> द्वारा कॉन्फ़िगर किए गए चैनलों का उपयोग करके एक संदेश तैयार करता है और भेजता है। डेवलपर इस ट्रैफ़िक को कभी नहीं देखता:</p>
+<ul>
+  <li><strong>आपके डिवाइस मेल ऐप के माध्यम से ईमेल</strong>: आपके डिवाइस का मानक ईमेल प्रवाह, जो आपके ईमेल प्रदाता की गोपनीयता नीति द्वारा शासित है।</li>
+  <li><strong>Resend के माध्यम से ईमेल (वैकल्पिक)</strong>: संदेश आपके अपने Resend खाते से आपकी अपनी API कुंजी का उपयोग करके, आपके द्वारा दर्ज किए गए प्राप्तकर्ताओं को भेजा जाता है। Resend इस संचरण को <a href="https://resend.com/privacy">Resend की गोपनीयता नीति</a> के तहत संसाधित करता है।</li>
+  <li><strong>SMS (वैकल्पिक, Pro)</strong>: आपके डिवाइस और कैरियर द्वारा भेजा गया, मानो आपने स्वयं भेजा हो।</li>
+  <li><strong>समूह-बॉट वेबहुक (वैकल्पिक, Pro)</strong>: संदेश सीधे आपके द्वारा कॉन्फ़िगर किए गए वेबहुक URL पर जाते हैं (जैसे आपका अपना बॉट एकीकरण)।</li>
+</ul>
+<p>अलर्ट के प्राप्तकर्ता वे लोग हैं जिन्हें आपने स्पष्ट रूप से आपातकालीन संपर्क के रूप में जोड़ा है। सुनिश्चित करें कि वे ऐसे संदेश प्राप्त करने की अपेक्षा करते हैं।</p>
+
+<h3>5. अनुमतियाँ</h3>
+<ul>
+  <li><strong>इंटरनेट</strong> — आपके कॉन्फ़िगर किए गए चैनलों के माध्यम से अलर्ट ईमेल/वेबहुक भेजने के लिए आवश्यक।</li>
+  <li><strong>सूचनाएँ</strong> — चेक-इन अनुस्मारक और अलर्ट पुष्टि।</li>
+  <li><strong>अलार्म और अनुस्मारक (सटीक अलार्म)</strong> — ताकि चेक-इन अनुस्मारक कॉन्फ़िगर किए गए समय पर सक्रिय हों।</li>
+  <li><strong>SMS (वैकल्पिक)</strong> — केवल यदि आप SMS वितरण सक्षम करते हैं।</li>
+</ul>
+
+<h3>6. खरीदारी</h3>
+<p>सदस्यता और एकमुश्त खरीदारी पूरी तरह से <strong>Google Play Payments</strong> द्वारा संसाधित होती है। डेवलपर आपके भुगतान विवरण प्राप्त या संग्रहीत नहीं करता। Google आपके खरीद डेटा को <a href="https://policies.google.com/privacy">Google गोपनीयता नीति</a> के तहत संभालता है। ऐप केवल Pro सुविधाओं को अनलॉक करने के लिए Google Play के साथ आपकी खरीद स्थिति सत्यापित करता है (और खरीद वापसी या रद्द होने पर उन्हें फिर से लॉक करता है)।</p>
+
+<h3>7. बच्चे</h3>
+<p>ऐप 13 वर्ष से कम उम्र के बच्चों के लिए नहीं है और जानबूझकर किसी से भी डेटा एकत्र नहीं करता, बच्चों सहित।</p>
+
+<h3>8. परिवर्तन</h3>
+<p>यदि यह नीति बदलती है, तो नया संस्करण इस URL पर अद्यतन प्रभावी तिथि के साथ प्रकाशित किया जाएगा।</p>
+
+<h3>9. संपर्क</h3>
+<p>प्रश्न या अनुरोध: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ FRENCH ============ -->
+<h2 id="fr">Français</h2>
+
+<p><strong>Résumé en une phrase :</strong> ImFine fonctionne entièrement sur votre appareil. Vos contacts d'urgence, vos enregistrements de pointage et vos paramètres ne parviennent jamais au développeur — ils sont stockés chiffrés sur votre téléphone et sont envoyés <em>uniquement par vous, via vos propres canaux</em> (votre compte e-mail, votre clé d'API e-mail, votre SMS, ou vos propres webhooks de bot de groupe).</p>
+
+<h3>1. Qui nous sommes</h3>
+<p>ImFine (« l'Application ») est développé et exploité en tant que produit logiciel indépendant. Pour toute question de confidentialité, contactez : <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Données que nous ne collectons PAS</h3>
+<ul>
+  <li>Nous n'exploitons aucun serveur stockant vos données.</li>
+  <li>Nous ne collectons, transmettons, vendons ni ne partageons vos données personnelles, contacts, historique de pointage ou localisation.</li>
+  <li>Nous n'avons aucun SDK publicitaire ni SDK d'analyse/suivi.</li>
+</ul>
+
+<h3>3. Données stockées sur votre appareil</h3>
+<p>Les éléments suivants restent uniquement sur votre appareil et sont chiffrés au repos :</p>
+<ul>
+  <li><strong>Contacts d'urgence</strong> (noms, e-mails/téléphones que vous saisissez) — stockés dans une base de données chiffrée AES-256 (SQLCipher).</li>
+  <li><strong>Paramètres et modèles de messages</strong> — stockés dans un stockage chiffré basé sur Android Keystore (EncryptedSharedPreferences).</li>
+  <li><strong>Enregistrements de pointage et historique des alertes</strong> — stockés localement.</li>
+  <li><strong>Clés d'API optionnelles</strong> (p. ex. une clé d'API e-mail Resend.com, ou des clés push que vous choisissez d'enregistrer) — stockées chiffrées sur l'appareil et utilisées uniquement pour envoyer des alertes <em>aux destinataires que vous avez choisis</em>.</li>
+</ul>
+<p>Vous pouvez tout supprimer à tout moment via <em>Paramètres → Confidentialité et clause de non-responsabilité → Supprimer toutes mes données</em>, ou en désinstallant l'Application.</p>
+
+<h3>4. Données envoyées par vous, via vos propres comptes</h3>
+<p>Lorsqu'une alerte est déclenchée, l'Application compose et envoie un message en utilisant les canaux que <em>vous</em> avez configurés. Le développeur ne voit jamais ce trafic :</p>
+<ul>
+  <li><strong>E-mail via l'application mail de votre appareil</strong> : flux de messagerie standard de votre appareil, régi par la politique de confidentialité de votre fournisseur de messagerie.</li>
+  <li><strong>E-mail via Resend (optionnel)</strong> : le message est envoyé depuis votre propre compte Resend en utilisant votre propre clé d'API, aux destinataires que vous avez saisis. Resend traite cette transmission conformément à la <a href="https://resend.com/privacy">politique de confidentialité de Resend</a>.</li>
+  <li><strong>SMS (optionnel, Pro)</strong> : envoyé par votre appareil et votre opérateur comme si vous l'aviez envoyé vous-même.</li>
+  <li><strong>Webhooks de bot de groupe (optionnel, Pro)</strong> : les messages vont directement aux URL de webhook que vous avez configurées (p. ex. votre propre intégration de bot).</li>
+</ul>
+<p>Les destinataires des alertes sont les personnes que vous avez explicitement ajoutées en tant que contacts d'urgence. Assurez-vous qu'ils s'attendent à recevoir de tels messages.</p>
+
+<h3>5. Autorisations</h3>
+<ul>
+  <li><strong>Internet</strong> — nécessaire pour envoyer des e-mails/webhooks d'alerte via vos canaux configurés.</li>
+  <li><strong>Notifications</strong> — rappels de pointage et confirmations d'alerte.</li>
+  <li><strong>Alarmes et rappels (alarme exacte)</strong> — pour que les rappels de pointage se déclenchent à l'heure configurée.</li>
+  <li><strong>SMS (optionnel)</strong> — uniquement si vous activez l'envoi par SMS.</li>
+</ul>
+
+<h3>6. Achats</h3>
+<p>Les abonnements et les achats uniques sont entièrement traités par <strong>Google Play Payments</strong>. Le développeur ne reçoit ni ne stocke vos informations de paiement. Google gère vos données d'achat conformément à la <a href="https://policies.google.com/privacy">Politique de confidentialité de Google</a>. L'Application vérifie votre statut d'achat auprès de Google Play uniquement pour débloquer les fonctionnalités Pro (et les verrouiller à nouveau en cas de remboursement ou d'annulation d'un achat).</p>
+
+<h3>7. Enfants</h3>
+<p>L'Application n'est pas destinée aux enfants de moins de 13 ans et ne collecte sciemment aucune donnée de qui que ce soit, y compris des enfants.</p>
+
+<h3>8. Modifications</h3>
+<p>Si cette politique change, la nouvelle version sera publiée à cette URL avec une date d'entrée en vigueur mise à jour.</p>
+
+<h3>9. Contact</h3>
+<p>Questions ou demandes : <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ KOREAN ============ -->
+<h2 id="ko">한국어</h2>
+
+<p><strong>한 줄 요약:</strong> ImFine은 기기에서 완전히 작동합니다. 비상 연락처, 체크인 기록 및 설정은 개발자에게 결코 도달하지 않습니다 — 휴대전화에 암호화되어 저장되며, <em>오직 귀하가 귀하의 자체 채널</em>(귀하의 이메일 계정, 이메일 API 키, SMS, 또는 귀하의 그룹봇 웹훅)을 통해서만 전송됩니다.</p>
+
+<h3>1. 당사 소개</h3>
+<p>ImFine("앱")은 독립적인 소프트웨어 제품으로 개발되고 운영됩니다. 개인정보 보호 관련 문의: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. 수집하지 않는 데이터</h3>
+<ul>
+  <li>당사는 귀하의 데이터를 저장하는 서버를 운영하지 않습니다.</li>
+  <li>당사는 귀하의 개인 데이터, 연락처, 체크인 기록 또는 위치를 수집, 전송, 판매 또는 공유하지 않습니다.</li>
+  <li>광고 SDK가 없으며 분석/추적 SDK도 없습니다.</li>
+</ul>
+
+<h3>3. 기기에 저장되는 데이터</h3>
+<p>다음은 귀하의 기기에만 보관되며 저장 중 암호화됩니다:</p>
+<ul>
+  <li><strong>비상 연락처</strong>(이름, 입력하신 마스킹된 이메일/전화번호) — AES-256 암호화 데이터베이스(SQLCipher)에 저장.</li>
+  <li><strong>설정 및 메시지 템플릿</strong> — Android Keystore 기반 암호화 저장소(EncryptedSharedPreferences)에 저장.</li>
+  <li><strong>체크인 기록 및 알림 이력</strong> — 로컬에 저장.</li>
+  <li><strong>선택적 API 키</strong>(예: Resend.com 이메일 API 키, 또는 저장하려는 푸시 키) — 기기에 암호화되어 저장되며, <em>귀하가 선택한 수신자</em>에게 알림을 보내는 데만 사용됩니다.</li>
+</ul>
+<p>언제든지 <em>설정 → 개인정보 및 면책 조항 → 내 모든 데이터 삭제</em>를 통해 모두 삭제하거나, 앱을 제거할 수 있습니다.</p>
+
+<h3>4. 귀하가 귀하의 계정을 통해 전송하는 데이터</h3>
+<p>알림이 트리거되면, 앱은 <em>귀하가</em> 설정한 채널을 사용하여 메시지를 작성하고 전송합니다. 개발자는 이 트래픽을 결코 보지 않습니다:</p>
+<ul>
+  <li><strong>기기 메일 앱을 통한 이메일</strong>: 기기의 표준 이메일 흐름, 이메일 제공자의 개인정보처리방침에 따라 규제됨.</li>
+  <li><strong>Resend를 통한 이메일(선택)</strong>: 귀하의 자체 Resend 계정에서 귀하의 자체 API 키를 사용하여 입력하신 수신자에게 메시지가 전송됩니다. Resend는 <a href="https://resend.com/privacy">Resend의 개인정보처리방침</a>에 따라 이 전송을 처리합니다.</li>
+  <li><strong>SMS(선택, Pro)</strong>: 귀하가 직접 보낸 것처럼 기기와 통신사에 의해 전송.</li>
+  <li><strong>그룹봇 웹훅(선택, Pro)</strong>: 메시지는 귀하가 설정한 웹훅 URL로 직접 전달됩니다(예: 귀하의 자체 봇 통합).</li>
+</ul>
+<p>알림의 수신자는 귀하가 비상 연락처로 명시적으로 추가한 사람들입니다. 그들이 그러한 메시지를 수신할 것이라고 예상하는지 확인하세요.</p>
+
+<h3>5. 권한</h3>
+<ul>
+  <li><strong>인터넷</strong> — 설정된 채널을 통해 알림 이메일/웹훅을 전송하는 데 필요.</li>
+  <li><strong>알림</strong> — 체크인 알림 및 알림 확인.</li>
+  <li><strong>알람 및 알림(정확한 알람)</strong> — 체크인 알림이 설정된 시간에 실행되도록 함.</li>
+  <li><strong>SMS(선택)</strong> — SMS 전송을 활성화한 경우에만.</li>
+</ul>
+
+<h3>6. 구매</h3>
+<p>구독 및 일회성 구매는 전적으로 <strong>Google Play 결제</strong>에 의해 처리됩니다. 개발자는 귀하의 결제 정보를 수신하거나 저장하지 않습니다. Google은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 귀하의 구매 데이터를 처리합니다. 앱은 Pro 기능을 잠금 해제하기 위해서만(그리고 구매가 환불되거나 취소된 경우 다시 잠그기 위해) Google Play에 귀하의 구매 상태를 확인합니다.</p>
+
+<h3>7. 아동</h3>
+<p>이 앱은 13세 미만 아동을 대상으로 하지 않으며, 아동을 포함한 누구로부터도 의도적으로 데이터를 수집하지 않습니다.</p>
+
+<h3>8. 변경 사항</h3>
+<p>이 정책이 변경될 경우, 새 버전은 갱신된 시행일과 함께 이 URL에 게시됩니다.</p>
+
+<h3>9. 연락처</h3>
+<p>질문이나 요청: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ JAPANESE ============ -->
+<h2 id="ja">日本語</h2>
+
+<p><strong>一言要約:</strong> ImFineは完全にあなたのデバイス上で動作します。緊急連絡先、チェックイン記録、設定は開発者に一切到達しません — それらはあなたのスマートフォンに暗号化されて保存され、<em>あなた自身のチャネル</em>（あなたのメールアカウント、メールAPIキー、SMS、またはあなた独自のグループボットWebhook）を通じて、あなた自身によってのみ送信されます。</p>
+
+<h3>1. 私たちについて</h3>
+<p>ImFine（「本アプリ」）は、独立したソフトウェア製品として開発・運営されています。プライバシーに関するご質問は: <strong>jamesxu1026@gmail.com</strong> までご連絡ください。</p>
+
+<h3>2. 収集しないデータ</h3>
+<ul>
+  <li>当社はあなたのデータを保存するサーバーを運営していません。</li>
+  <li>当社はあなたの個人データ、連絡先、チェックイン履歴、位置情報を収集・送信・販売・共有しません。</li>
+  <li>広告SDKや分析/トラッキングSDKは一切含まれていません。</li>
+</ul>
+
+<h3>3. デバイスに保存されるデータ</h3>
+<p>以下はあなたのデバイスのみに留まり、保存時に暗号化されます:</p>
+<ul>
+  <li><strong>緊急連絡先</strong>（氏名、入力したマスキングされたメール/電話番号）— AES-256暗号化データベース（SQLCipher）に保存。</li>
+  <li><strong>設定とメッセージテンプレート</strong> — Android Keystoreを基盤とした暗号化ストレージ（EncryptedSharedPreferences）に保存。</li>
+  <li><strong>チェックイン記録とアラート履歴</strong> — ローカルに保存。</li>
+  <li><strong>任意のAPIキー</strong>（Resend.comメールAPIキーや、保存を選択したプッシュキーなど） — デバイス上に暗号化されて保存され、<em>あなたが選択した受信者</em>にアラートを送信するためのみに使用されます。</li>
+</ul>
+<p><em>設定 → プライバシーと免責事項 → すべてのデータを削除</em>、またはアプリをアンインストールすることで、いつでもこれらを削除できます。</p>
+
+<h3>4. あなた自身のアカウントを通じて送信されるデータ</h3>
+<p>アラートがトリガーされると、アプリは<em>あなたが</em>設定したチャネルを使用してメッセージを作成・送信します。開発者はこの通信を一切閲覧できません:</p>
+<ul>
+  <li><strong>デバイスのメールアプリ経由のメール</strong>: デバイスの標準メールフローで、メールプロバイダーのプライバシーポリシーに準拠します。</li>
+  <li><strong>Resend経由のメール（任意）</strong>: メッセージはあなた独自のResendアカウントからあなた独自のAPIキーを使用して、あなたが入力した受信者に送信されます。Resendはこの送信を<a href="https://resend.com/privacy">Resendのプライバシーポリシー</a>に基づいて処理します。</li>
+  <li><strong>SMS（任意、Pro）</strong>: あなたが自分で送信したかのように、デバイスと通信事業者によって送信されます。</li>
+  <li><strong>グループボットWebhook（任意、Pro）</strong>: メッセージはあなたが設定したWebhook URLに直接送信されます（例: あなた独自のボット統合）。</li>
+</ul>
+<p>アラートの受信者は、あなたが緊急連絡先として明示的に追加した人物です。彼らがそのようなメッセージを受け取ることを想定しているか確認してください。</p>
+
+<h3>5. 権限</h3>
+<ul>
+  <li><strong>インターネット</strong> — 設定したチャネルを通じてアラートメール/Webhookを送信するために必要。</li>
+  <li><strong>通知</strong> — チェックインリマインダーとアラート確認。</li>
+  <li><strong>アラームとリマインダー（正確なアラーム）</strong> — チェックインリマインダーが設定時刻に実行されるようにするため。</li>
+  <li><strong>SMS（任意）</strong> — SMS配信を有効にした場合のみ。</li>
+</ul>
+
+<h3>6. 購入</h3>
+<p>サブスクリプションと都度購入はすべて<strong>Google Play決済</strong>によって処理されます。開発者はあなたの支払い情報を受信・保存しません。Googleは<a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>に従いあなたの購入データを処理します。アプリはPro機能をロック解除するためのみ（および購入が返金・キャンセルされた場合に再ロックするため）にGoogle Playであなたの購入ステータスを確認します。</p>
+
+<h3>7. 児童</h3>
+<p>本アプリは13歳未満の児童を対象としておらず、児童を含むいかなる人物からも意図的にデータを収集しません。</p>
+
+<h3>8. 変更</h3>
+<p>本ポリシーが変更された場合、新バージョンはこのURLで更新された発効日と共に公開されます。</p>
+
+<h3>9. お問い合わせ</h3>
+<p>ご質問やご要望: <strong>jamesxu1026@gmail.com</strong>。</p>
+
+<!-- ============ ITALIAN ============ -->
+<h2 id="it">Italiano</h2>
+
+<p><strong>Riepilogo in una frase:</strong> ImFine funziona interamente sul tuo dispositivo. I tuoi contatti di emergenza, i registri di check-in e le impostazioni non raggiungono mai lo sviluppatore — sono memorizzati crittografati sul tuo telefono e sono inviati <em>solo da te, tramite i tuoi canali</em> (il tuo account e-mail, la tua chiave API e-mail, il tuo SMS, o i tuoi webhook di bot di gruppo).</p>
+
+<h3>1. Chi siamo</h3>
+<p>ImFine ("l'App") è sviluppato e gestito come prodotto software indipendente. Per domande sulla privacy, contatta: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Dati che NON raccogliamo</h3>
+<ul>
+  <li>Non gestiamo alcun server che memorizza i tuoi dati.</li>
+  <li>Non raccogliamo, trasmettiamo, vendiamo o condividiamo i tuoi dati personali, contatti, cronologia di check-in o posizione.</li>
+  <li>Non utilizziamo SDK pubblicitari né SDK di analisi/tracciamento.</li>
+</ul>
+
+<h3>3. Dati memorizzati sul tuo dispositivo</h3>
+<p>I seguenti dati rimangono solo sul tuo dispositivo e sono crittografati a riposo:</p>
+<ul>
+  <li><strong>Contatti di emergenza</strong> (nomi, e-mail/numeri che inserisci) — memorizzati in un database crittografato AES-256 (SQLCipher).</li>
+  <li><strong>Impostazioni e modelli di messaggi</strong> — memorizzati in un archivio crittografato basato su Android Keystore (EncryptedSharedPreferences).</li>
+  <li><strong>Registri di check-in e cronologia avvisi</strong> — memorizzati localmente.</li>
+  <li><strong>Chiavi API opzionali</strong> (p. es. una chiave API e-mail di Resend.com o chiavi push che scegli di salvare) — memorizzate crittografate sul dispositivo e utilizzate solo per inviare avvisi <em>ai destinatari da te scelti</em>.</li>
+</ul>
+<p>Puoi eliminare tutto in qualsiasi momento tramite <em>Impostazioni → Privacy e dichiarazione di non responsabilità → Elimina tutti i miei dati</em>, o disinstallando l'App.</p>
+
+<h3>4. Dati inviati da te, tramite i tuoi account</h3>
+<p>Quando viene attivato un avviso, l'App compone e invia un messaggio utilizzando i canali che <em>tu</em> hai configurato. Lo sviluppatore non vede mai questo traffico:</p>
+<ul>
+  <li><strong>E-mail tramite l'app di posta del tuo dispositivo</strong>: flusso di posta standard del tuo dispositivo, regolato dall'informativa sulla privacy del tuo provider di posta.</li>
+  <li><strong>E-mail tramite Resend (opzionale)</strong>: il messaggio viene inviato dal tuo account Resend utilizzando la tua chiave API, ai destinatari che hai inserito. Resend elabora questa trasmissione secondo l'<a href="https://resend.com/privacy">informativa sulla privacy di Resend</a>.</li>
+  <li><strong>SMS (opzionale, Pro)</strong>: inviato dal tuo dispositivo e operatore come se lo avessi inviato tu stesso.</li>
+  <li><strong>Webhook di bot di gruppo (opzionale, Pro)</strong>: i messaggi vanno direttamente agli URL webhook che hai configurato (p. es. la tua integrazione bot).</li>
+</ul>
+<p>I destinatari degli avvisi sono le persone che hai aggiunto esplicitamente come contatti di emergenza. Assicurati che si aspettino di ricevere tali messaggi.</p>
+
+<h3>5. Autorizzazioni</h3>
+<ul>
+  <li><strong>Internet</strong> — necessario per inviare e-mail/webhook di avviso tramite i canali configurati.</li>
+  <li><strong>Notifiche</strong> — promemoria di check-in e conferme di avviso.</li>
+  <li><strong>Allarmi e promemoria (allarme esatto)</strong> — affinché i promemoria di check-in si attivino all'ora configurata.</li>
+  <li><strong>SMS (opzionale)</strong> — solo se abiliti la consegna SMS.</li>
+</ul>
+
+<h3>6. Acquisti</h3>
+<p>Abbonamenti e acquisti una tantum sono gestiti interamente da <strong>Google Play Payments</strong>. Lo sviluppatore non riceve né memorizza i tuoi dati di pagamento. Google gestisce i tuoi dati di acquisto secondo l'<a href="https://policies.google.com/privacy">Informativa sulla privacy di Google</a>. L'App verifica il tuo stato di acquisto con Google Play esclusivamente per sbloccare le funzionalità Pro (e bloccarle di nuovo se un acquisto viene rimborsato o annullato).</p>
+
+<h3>7. Bambini</h3>
+<p>L'App non è rivolta a bambini di età inferiore a 13 anni e non raccoglie consapevolmente dati da nessuno, inclusi i bambini.</p>
+
+<h3>8. Modifiche</h3>
+<p>Se questa informativa cambia, la nuova versione sarà pubblicata a questo URL con una data di entrata in vigore aggiornata.</p>
+
+<h3>9. Contatti</h3>
+<p>Domande o richieste: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ NORWEGIAN BOKMÅL ============ -->
+<h2 id="nb">Norsk Bokmål</h2>
+
+<p><strong>Sammendrag i én setning:</strong> ImFine fungerer helt og holdent på enheten din. Nødkontaktene dine, innsjekkingsoppføringer og innstillinger når aldri utvikleren — de er lagret kryptert på telefonen din og sendes <em>utelukkende av deg, gjennom dine egne kanaler</em> (din e-postkonto, din e-post API-nøkkel, din SMS, eller dine egne gruppebot-webhooks).</p>
+
+<h3>1. Hvem vi er</h3>
+<p>ImFine («Appen») utvikles og drives som et uavhengig programvareprodukt. For spørsmål om personvern, kontakt: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Data vi IKKE samler inn</h3>
+<ul>
+  <li>Vi driver ingen server som lagrer dataene dine.</li>
+  <li>Vi samler ikke inn, overfører, selger eller deler dine personopplysninger, kontakter, innsjekkingshistorikk eller posisjon.</li>
+  <li>Vi har ingen annonse-SDK-er og ingen analyse-/sporings-SDK-er.</li>
+</ul>
+
+<h3>3. Data lagret på enheten din</h3>
+<p>Følgende forblir utelukkende på enheten din og er kryptert i hvile:</p>
+<ul>
+  <li><strong>Nødkontakter</strong> (navn, e-poster/telefoner du oppgir) — lagret i en AES-256-kryptert database (SQLCipher).</li>
+  <li><strong>Innstillinger og meldingsmaler</strong> — lagret i Android Keystore-støttet kryptert lagring (EncryptedSharedPreferences).</li>
+  <li><strong>Innsjekkingsoppføringer og varselhistorikk</strong> — lagret lokalt.</li>
+  <li><strong>Valgfrie API-nøkler</strong> (f.eks. en Resend.com e-post API-nøkkel, eller push-nøkler du velger å lagre) — lagret kryptert på enheten og kun brukt til å sende varsler til <em>dine valgte mottakere</em>.</li>
+</ul>
+<p>Du kan slette alt sammen når som helst via <em>Innstillinger → Personvern og ansvarsfraskrivelse → Slett alle mine data</em>, eller ved å avinstallere Appen.</p>
+
+<h3>4. Data sendt av deg, gjennom dine egne kontoer</h3>
+<p>Når et varsel utløses, komponerer og sender Appen en melding ved hjelp av kanalene <em>du</em> har konfigurert. Utvikleren ser aldri denne trafikken:</p>
+<ul>
+  <li><strong>E-post via enhetens e-postapp</strong>: enhetens standard e-postflyt, regulert av e-postleverandørens personvernregler.</li>
+  <li><strong>E-post via Resend (valgfritt)</strong>: meldingen sendes fra din egen Resend-konto ved hjelp av din egen API-nøkkel, til mottakere du har oppgitt. Resend behandler denne overføringen under <a href="https://resend.com/privacy">Resends personvernregler</a>.</li>
+  <li><strong>SMS (valgfritt, Pro)</strong>: sendt av enheten din og operatøren din som om du sendte den selv.</li>
+  <li><strong>Gruppebot-webhooks (valgfritt, Pro)</strong>: meldinger går direkte til webhook-URL-ene du har konfigurert (f.eks. din egen bot-integrasjon).</li>
+</ul>
+<p>Mottakerne av varsler er personer du uttrykkelig har lagt til som nødkontakter. Sørg for at de forventer å motta slike meldinger.</p>
+
+<h3>5. Tillatelser</h3>
+<ul>
+  <li><strong>Internett</strong> — nødvendig for å sende varsels-e-poster/webhooks gjennom dine konfigurerte kanaler.</li>
+  <li><strong>Varsler</strong> — innsjekkingspåminnelser og varselsbekreftelser.</li>
+  <li><strong>Alarmer og påminnelser (nøyaktig alarm)</strong> — slik at innsjekkingspåminnelser utløses på det konfigurerte tidspunktet.</li>
+  <li><strong>SMS (valgfritt)</strong> — kun hvis du aktiverer SMS-levering.</li>
+</ul>
+
+<h3>6. Kjøp</h3>
+<p>Abonnementer og engangskjøp behandles utelukkende av <strong>Google Play Payments</strong>. Utvikleren mottar eller lagrer ikke betalingsopplysningene dine. Google håndterer kjøpsdataene dine under <a href="https://policies.google.com/privacy">Googles personvernregler</a>. Appen verifiserer kjøpsstatusen din hos Google Play utelukkende for å låse opp Pro-funksjoner (og låse dem igjen hvis et kjøp refunderes eller kanselleres).</p>
+
+<h3>7. Barn</h3>
+<p>Appen er ikke rettet mot barn under 13 år og samler ikke bevisst data fra noen, inkludert barn.</p>
+
+<h3>8. Endringer</h3>
+<p>Hvis denne retningslinjen endres, vil den nye versjonen publiseres på denne URL-en med en oppdatert ikrafttredelsesdato.</p>
+
+<h3>9. Kontakt</h3>
+<p>Spørsmål eller forespørsler: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ DUTCH ============ -->
+<h2 id="nl">Nederlands</h2>
+
+<p><strong>Samenvatting in één zin:</strong> ImFine werkt volledig op uw apparaat. Uw noodcontacten, check-inregistraties en instellingen bereiken de ontwikkelaar nooit — ze worden versleuteld opgeslagen op uw telefoon en worden <em>uitsluitend door u, via uw eigen kanalen</em> (uw e-mailaccount, uw e-mail-API-sleutel, uw sms of uw eigen groepsbot-webhooks) verzonden.</p>
+
+<h3>1. Wie we zijn</h3>
+<p>ImFine ("de App") wordt ontwikkeld en beheerd als een onafhankelijk softwareproduct. Voor privacyvragen, neem contact op met: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Gegevens die we NIET verzamelen</h3>
+<ul>
+  <li>Wij beheren geen server die uw gegevens opslaat.</li>
+  <li>Wij verzamelen, verzenden, verkopen of delen geen persoonsgegevens, contacten, check-in-geschiedenis of locatie.</li>
+  <li>Wij hebben geen advertentie-SDK's en geen analyse-/tracking-SDK's.</li>
+</ul>
+
+<h3>3. Gegevens opgeslagen op uw apparaat</h3>
+<p>Het volgende blijft uitsluitend op uw apparaat en is in rust versleuteld:</p>
+<ul>
+  <li><strong>Noodcontacten</strong> (namen, e-mails/telefoonnummers die u invoert) — opgeslagen in een met AES-256 versleutelde database (SQLCipher).</li>
+  <li><strong>Instellingen en berichtsjablonen</strong> — opgeslagen in Android Keystore-ondersteunde versleutelde opslag (EncryptedSharedPreferences).</li>
+  <li><strong>Check-in-registraties en waarschuwingsgeschiedenis</strong> — lokaal opgeslagen.</li>
+  <li><strong>Optionele API-sleutels</strong> (bijv. een Resend.com e-mail-API-sleutel of push-sleutels die u wilt opslaan) — versleuteld opgeslagen op het apparaat en alleen gebruikt om waarschuwingen naar <em>uw gekozen ontvangers</em> te sturen.</li>
+</ul>
+<p>U kunt dit allemaal op elk moment verwijderen via <em>Instellingen → Privacy en disclaimer → Al mijn gegevens verwijderen</em>, of door de App te verwijderen.</p>
+
+<h3>4. Gegevens verzonden door u, via uw eigen accounts</h3>
+<p>Wanneer een waarschuwing wordt geactiveerd, stelt de App een bericht op en stuurt dit via de kanalen die <em>u</em> hebt geconfigureerd. De ontwikkelaar ziet dit verkeer nooit:</p>
+<ul>
+  <li><strong>E-mail via de e-mailapp van uw apparaat</strong>: de standaard e-mailstroom van uw apparaat, onderworpen aan het privacybeleid van uw e-mailprovider.</li>
+  <li><strong>E-mail via Resend (optioneel)</strong>: het bericht wordt verzonden vanuit uw eigen Resend-account met uw eigen API-sleutel, naar ontvangers die u hebt ingevoerd. Resend verwerkt deze verzending onder het <a href="https://resend.com/privacy">privacybeleid van Resend</a>.</li>
+  <li><strong>SMS (optioneel, Pro)</strong>: verzonden door uw apparaat en provider alsof u het zelf had verzonden.</li>
+  <li><strong>Groepsbot-webhooks (optioneel, Pro)</strong>: berichten gaan rechtstreeks naar de webhook-URL's die u hebt geconfigureerd (bijv. uw eigen bot-integratie).</li>
+</ul>
+<p>De ontvangers van waarschuwingen zijn personen die u expliciet als noodcontacten hebt toegevoegd. Zorg ervoor dat zij verwachten zulke berichten te ontvangen.</p>
+
+<h3>5. Machtigingen</h3>
+<ul>
+  <li><strong>Internet</strong> — vereist om waarschuwings-e-mails/webhooks via uw geconfigureerde kanalen te versturen.</li>
+  <li><strong>Meldingen</strong> — check-in-herinneringen en waarschuwingsbevestigingen.</li>
+  <li><strong>Alarmen en herinneringen (exact alarm)</strong> — zodat check-in-herinneringen op het ingestelde tijdstip afgaan.</li>
+  <li><strong>SMS (optioneel)</strong> — alleen als u SMS-levering inschakelt.</li>
+</ul>
+
+<h3>6. Aankopen</h3>
+<p>Abonnementen en eenmalige aankopen worden volledig verwerkt door <strong>Google Play Payments</strong>. De ontwikkelaar ontvangt of slaat uw betalingsgegevens niet op. Google verwerkt uw aankoopgegevens volgens het <a href="https://policies.google.com/privacy">privacybeleid van Google</a>. De App verifieert uw aankoopstatus bij Google Play uitsluitend om Pro-functies te ontgrendelen (en ze weer te vergrendelen als een aankoop wordt terugbetaald of geannuleerd).</p>
+
+<h3>7. Kinderen</h3>
+<p>De App is niet gericht op kinderen onder de 13 jaar en verzamelt bewust geen gegevens van wie dan ook, inclusief kinderen.</p>
+
+<h3>8. Wijzigingen</h3>
+<p>Als dit beleid verandert, wordt de nieuwe versie gepubliceerd op deze URL met een bijgewerkte ingangsdatum.</p>
+
+<h3>9. Contact</h3>
+<p>Vragen of verzoeken: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ PORTUGUESE ============ -->
+<h2 id="pt">Português</h2>
+
+<p><strong>Resumo numa frase:</strong> O ImFine funciona inteiramente no seu dispositivo. Os seus contactos de emergência, registos de check-in e definições nunca chegam ao programador — são armazenados encriptados no seu telefone e são enviados <em>apenas por si, através dos seus próprios canais</em> (a sua conta de e-mail, a sua chave de API de e-mail, o seu SMS, ou os seus próprios webhooks de bot de grupo).</p>
+
+<h3>1. Quem somos</h3>
+<p>O ImFine ("a App") é desenvolvido e operado como um produto de software independente. Para questões de privacidade, contacte: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Dados que NÃO recolhemos</h3>
+<ul>
+  <li>Não operamos nenhum servidor que armazene os seus dados.</li>
+  <li>Não recolhemos, transmitimos, vendemos nem partilhamos os seus dados pessoais, contactos, histórico de check-in ou localização.</li>
+  <li>Não temos SDKs de publicidade nem SDKs de análise/rastreamento.</li>
+</ul>
+
+<h3>3. Dados armazenados no seu dispositivo</h3>
+<p>O seguinte permanece apenas no seu dispositivo e está encriptado em repouso:</p>
+<ul>
+  <li><strong>Contactos de emergência</strong> (nomes, e-mails/telefones que insere) — armazenados numa base de dados encriptada com AES-256 (SQLCipher).</li>
+  <li><strong>Definições e modelos de mensagens</strong> — armazenados num armazenamento encriptado suportado pelo Android Keystore (EncryptedSharedPreferences).</li>
+  <li><strong>Registos de check-in e histórico de alertas</strong> — armazenados localmente.</li>
+  <li><strong>Chaves de API opcionais</strong> (p. ex., uma chave de API de e-mail do Resend.com ou chaves push que opta por guardar) — armazenadas encriptadas no dispositivo e usadas apenas para enviar alertas <em>aos destinatários que escolheu</em>.</li>
+</ul>
+<p>Pode eliminar todos os dados a qualquer momento através de <em>Definições → Privacidade e exclusão de responsabilidade → Eliminar todos os meus dados</em>, ou desinstalando a App.</p>
+
+<h3>4. Dados enviados por si, através das suas próprias contas</h3>
+<p>Quando um alerta é acionado, a App compõe e envia uma mensagem utilizando os canais que <em>si</em> configurou. O programador nunca vê este tráfego:</p>
+<ul>
+  <li><strong>E-mail através da aplicação de e-mail do seu dispositivo</strong>: o fluxo de e-mail padrão do seu dispositivo, regido pela política de privacidade do seu fornecedor de e-mail.</li>
+  <li><strong>E-mail através do Resend (opcional)</strong>: a mensagem é enviada a partir da sua própria conta Resend utilizando a sua própria chave de API, para os destinatários que introduziu. O Resend processa esta transmissão ao abrigo da <a href="https://resend.com/privacy">política de privacidade do Resend</a>.</li>
+  <li><strong>SMS (opcional, Pro)</strong>: enviado pelo seu dispositivo e operador como se o tivesse enviado.</li>
+  <li><strong>Webhooks de bot de grupo (opcional, Pro)</strong>: as mensagens vão diretamente para os URLs de webhook que configurou (p. ex., a sua própria integração de bot).</li>
+</ul>
+<p>Os destinatários dos alertas são pessoas que adicionou explicitamente como contactos de emergência. Certifique-se de que esperam receber tais mensagens.</p>
+
+<h3>5. Permissões</h3>
+<ul>
+  <li><strong>Internet</strong> — necessário para enviar e-mails/webhooks de alerta através dos seus canais configurados.</li>
+  <li><strong>Notificações</strong> — lembretes de check-in e confirmações de alertas.</li>
+  <li><strong>Alarmes e lembretes (alarme exato)</strong> — para que os lembretes de check-in sejam acionados na hora configurada.</li>
+  <li><strong>SMS (opcional)</strong> — apenas se ativar o envio por SMS.</li>
+</ul>
+
+<h3>6. Compras</h3>
+<p>As subscrições e as compras únicas são processadas inteiramente pelo <strong>Google Play Payments</strong>. O programador não recebe nem armazena os seus dados de pagamento. O Google trata dos seus dados de compra ao abrigo da <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>. A App verifica o seu estado de compra junto do Google Play apenas para desbloquear funcionalidades Pro (e voltar a bloqueá-las se uma compra for reembolsada ou cancelada).</p>
+
+<h3>7. Crianças</h3>
+<p>A App não se destina a crianças com idade inferior a 13 anos e não recolhe conscientemente dados de ninguém, incluindo crianças.</p>
+
+<h3>8. Alterações</h3>
+<p>Se esta política for alterada, a nova versão será publicada neste URL com uma data de entrada em vigor atualizada.</p>
+
+<h3>9. Contacto</h3>
+<p>Questões ou pedidos: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ SWEDISH ============ -->
+<h2 id="sv">Svenska</h2>
+
+<p><strong>Sammanfattning på en mening:</strong> ImFine fungerar helt och hållet på din enhet. Dina nödkontakter, incheckningsposter och inställningar når aldrig utvecklaren — de lagras krypterade på din telefon och skickas <em>endast av dig, via dina egna kanaler</em> (din e-postadress, din API-nyckel för e-post, ditt SMS eller dina egna gruppbots-webhooks).</p>
+
+<h3>1. Vilka vi är</h3>
+<p>ImFine ("Appen") utvecklas och drivs som en oberoende programvaruprodukt. Vid frågor om integritet, kontakta: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Data vi INTE samlar in</h3>
+<ul>
+  <li>Vi driver ingen server som lagrar din data.</li>
+  <li>Vi samlar inte in, överför, säljer eller delar dina personuppgifter, kontakter, incheckningshistorik eller plats.</li>
+  <li>Vi har inga SDK:er för annonsering och inga SDK:er för analys/spårning.</li>
+</ul>
+
+<h3>3. Data lagrad på din enhet</h3>
+<p>Följande stannar endast på din enhet och är krypterat i vila:</p>
+<ul>
+  <li><strong>Nödkontakter</strong> (namn, e-post/telefon du anger) — lagrade i en AES-256-krypterad databas (SQLCipher).</li>
+  <li><strong>Inställningar och meddelandemallar</strong> — lagrade i Android Keystore-stödd krypterad lagring (EncryptedSharedPreferences).</li>
+  <li><strong>Incheckningsposter och varningshistorik</strong> — lagrade lokalt.</li>
+  <li><strong>Valfria API-nycklar</strong> (t.ex. en Resend.com e-post-API-nyckel eller push-nycklar som du väljer att spara) — lagrade krypterade på enheten och används endast för att skicka varningar till <em>dina valda mottagare</em>.</li>
+</ul>
+<p>Du kan radera allt när som helst via <em>Inställningar → Integritet och ansvarsfriskrivning → Radera all min data</em>, eller genom att avinstallera Appen.</p>
+
+<h3>4. Data skickad av dig, via dina egna konton</h3>
+<p>När en varning utlöses skapar och skickar Appen ett meddelande med de kanaler som <em>du</em> har konfigurerat. Utvecklaren ser aldrig denna trafik:</p>
+<ul>
+  <li><strong>E-post via din enhets e-postapp</strong>: din enhets standardiserade e-postflöde, styrt av din e-postleverantörs integritetspolicy.</li>
+  <li><strong>E-post via Resend (valfritt)</strong>: meddelandet skickas från ditt eget Resend-konto med din egen API-nyckel, till mottagare du har angett. Resend behandlar denna överföring enligt <a href="https://resend.com/privacy">Resends integritetspolicy</a>.</li>
+  <li><strong>SMS (valfritt, Pro)</strong>: skickat av din enhet och operatör som om du hade skickat det själv.</li>
+  <li><strong>Gruppbots-webhooks (valfritt, Pro)</strong>: meddelanden går direkt till de webhook-URL:er du har konfigurerat (t.ex. din egen bot-integration).</li>
+</ul>
+<p>Mottagarna av varningar är personer som du uttryckligen har lagt till som nödkontakter. Se till att de förväntar sig att få sådana meddelanden.</p>
+
+<h3>5. Behörigheter</h3>
+<ul>
+  <li><strong>Internet</strong> — krävs för att skicka varnings-e-post/webhooks via dina konfigurerade kanaler.</li>
+  <li><strong>Aviseringar</strong> — incheckningspåminnelser och varningsbekräftelser.</li>
+  <li><strong>Alarm och påminnelser (exakt alarm)</strong> — så att incheckningspåminnelser utlöses vid den konfigurerade tiden.</li>
+  <li><strong>SMS (valfritt)</strong> — endast om du aktiverar SMS-leverans.</li>
+</ul>
+
+<h3>6. Köp</h3>
+<p>Prenumerationer och engångsköp hanteras helt av <strong>Google Play Payments</strong>. Utvecklaren tar inte emot eller lagrar dina betalningsuppgifter. Google hanterar dina köpdata enligt <a href="https://policies.google.com/privacy">Googles integritetspolicy</a>. Appen verifierar din köpstatus hos Google Play enbart för att låsa upp Pro-funktioner (och låsa dem igen om ett köp återbetalas eller avbryts).</p>
+
+<h3>7. Barn</h3>
+<p>Appen är inte riktad mot barn under 13 år och samlar inte medvetet in data från någon, inklusive barn.</p>
+
+<h3>8. Ändringar</h3>
+<p>Om denna policy ändras kommer den nya versionen att publiceras på denna URL med ett uppdaterat ikraftträdandedatum.</p>
+
+<h3>9. Kontakt</h3>
+<p>Frågor eller önskemål: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ THAI ============ -->
+<h2 id="th">ไทย</h2>
+
+<p><strong>สรุปในหนึ่งประโยค:</strong> ImFine ทำงานบนอุปกรณ์ของคุณทั้งหมด ผู้ติดต่อฉุกเฉิน บันทึกการเช็คอิน และการตั้งค่าของคุณจะไม่มีวันถึงผู้พัฒนา — ถูกจัดเก็บไว้อย่างเข้ารหัสบนโทรศัพท์ของคุณและถูกส่ง<em>โดยคุณเท่านั้น ผ่านช่องทางของคุณเอง</em> (บัญชีอีเมลของคุณ คีย์ API อีเมลของคุณ SMS ของคุณ หรือเว็บฮุกของบอตกลุ่มของคุณเอง)</p>
+
+<h3>1. ผู้พัฒนาคือใคร</h3>
+<p>ImFine ("แอป") ได้รับการพัฒนาและดำเนินการเป็นผลิตภัณฑ์ซอฟต์แวร์อิสระ สำหรับคำถามด้านความเป็นส่วนตัว ติดต่อ: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. ข้อมูลที่เราไม่รวบรวม</h3>
+<ul>
+  <li>เราไม่ดำเนินเซิร์ฟเวอร์ใดที่จัดเก็บข้อมูลของคุณ</li>
+  <li>เราไม่รวบรวม ส่งต่อ ขาย หรือแบ่งปันข้อมูลส่วนบุคคล ผู้ติดต่อ ประวัติการเช็คอิน หรือตำแหน่งของคุณ</li>
+  <li>เราไม่มี SDK โฆษณาและไม่มี SDK สำหรับการวิเคราะห์/การติดตาม</li>
+</ul>
+
+<h3>3. ข้อมูลที่จัดเก็บบนอุปกรณ์ของคุณ</h3>
+<p>สิ่งต่อไปนี้ยังคงอยู่บนอุปกรณ์ของคุณเท่านั้น และถูกเข้ารหัสเมื่อไม่ได้ใช้งาน:</p>
+<ul>
+  <li><strong>ผู้ติดต่อฉุกเฉิน</strong> (ชื่อ อีเมล/โทรศัพท์ที่ปกปิดที่คุณป้อน) — จัดเก็บในฐานข้อมูลที่เข้ารหัสด้วย AES-256 (SQLCipher)</li>
+  <li><strong>การตั้งค่าและเทมเพลตข้อความ</strong> — จัดเก็บในที่จัดเก็บที่เข้ารหัสสนับสนุนโดย Android Keystore (EncryptedSharedPreferences)</li>
+  <li><strong>บันทึกการเช็คอินและประวัติการแจ้งเตือน</strong> — จัดเก็บไว้ในเครื่อง</li>
+  <li><strong>คีย์ API เสริม</strong> (เช่น คีย์ API อีเมล Resend.com หรือคีย์พุชที่คุณเลือกจะบันทึก) — จัดเก็บไว้อย่างเข้ารหัสบนอุปกรณ์และใช้เพื่อส่งการแจ้งเตือนไปยัง<em>ผู้รับที่คุณเลือก</em>เท่านั้น</li>
+</ul>
+<p>คุณสามารถลบได้ทั้งหมดได้ตลอดเวลาผ่าน <em>การตั้งค่า → ความเป็นส่วนตัวและข้อจำกัดความรับผิด → ลบข้อมูลทั้งหมดของฉัน</em> หรือถอนการติดตั้งแอป</p>
+
+<h3>4. ข้อมูลที่ส่งโดยคุณ ผ่านบัญชีของคุณเอง</h3>
+<p>เมื่อมีการแจ้งเตือนถูกกระตุ้น แอปจะเรียบเรียงและส่งข้อความโดยใช้ช่องทางที่<em>คุณ</em>กำหนดค่าไว้ ผู้พัฒนาจะไม่เห็นการรับส่งข้อมูลนี้:</p>
+<ul>
+  <li><strong>อีเมลผ่านแอปเมลของอุปกรณ์</strong>: กระบวนการอีเมลมาตรฐานของอุปกรณ์ อยู่ภายใต้นโยบายความเป็นส่วนตัวของผู้ให้บริการอีเมลของคุณ</li>
+  <li><strong>อีเมลผ่าน Resend (เสริม)</strong>: ข้อความถูกส่งจากบัญชี Resend ของคุณเองโดยใช้คีย์ API ของคุณเอง ไปยังผู้รับที่คุณป้อน Resend ดำเนินการส่งต่อนี้ภายใต้<a href="https://resend.com/privacy">นโยบายความเป็นส่วนตัวของ Resend</a></li>
+  <li><strong>SMS (เสริม, Pro)</strong>: ส่งโดยอุปกรณ์และผู้ให้บริการของคุณราวกับว่าคุณเป็นผู้ส่งเอง</li>
+  <li><strong>เว็บฮุกของบอตกลุ่ม (เสริม, Pro)</strong>: ข้อความจะไปยัง URL ของเว็บฮุกที่คุณกำหนดค่าไว้โดยตรง (เช่น การเชื่อมต่อบอตของคุณเอง)</li>
+</ul>
+<p>ผู้รับของการแจ้งเตือนคือบุคคลที่คุณเพิ่มอย่างชัดเจนในฐานะผู้ติดต่อฉุกเฉิน ตรวจสอบให้แน่ใจว่าพวกเขาคาดหวังที่จะได้รับข้อความดังกล่าว</p>
+
+<h3>5. สิทธิ์</h3>
+<ul>
+  <li><strong>อินเทอร์เน็ต</strong> — จำเป็นสำหรับส่งอีเมล/เว็บฮุกการแจ้งเตือนผ่านช่องทางที่คุณกำหนดค่าไว้</li>
+  <li><strong>การแจ้งเตือน</strong> — การเตือนการเช็คอินและการยืนยันการแจ้งเตือน</li>
+  <li><strong>ปลุกและเตือน (ปลุกที่แม่นยำ)</strong> — เพื่อให้การเตือนการเช็คอินทำงานตามเวลาที่กำหนด</li>
+  <li><strong>SMS (เสริม)</strong> — เฉพาะเมื่อคุณเปิดใช้งานการส่ง SMS</li>
+</ul>
+
+<h3>6. การซื้อ</h3>
+<p>การสมัครสมาชิกและการซื้อครั้งเดียวดำเนินการทั้งหมดโดย <strong>Google Play Payments</strong> ผู้พัฒนาจะไม่ได้รับหรือจัดเก็บรายละเอียดการชำระเงินของคุณ Google จัดการข้อมูลการซื้อของคุณภายใต้<a href="https://policies.google.com/privacy">นโยบายความเป็นส่วนตัวของ Google</a> แอปตรวจสอบสถานะการซื้อของคุณกับ Google Play เพื่อปลดล็อกคุณสมบัติ Pro เท่านั้น (และล็อกอีกครั้งหากการซื้อถูกคืนเงินหรือยกเลิก)</p>
+
+<h3>7. เด็ก</h3>
+<p>แอปนี้ไม่ได้มุ่งเน้นไปที่เด็กอายุต่ำกว่า 13 ปีและไม่รวบรวมข้อมูลจากบุคคลใดอย่างตั้งใจ รวมถึงเด็ก</p>
+
+<h3>8. การเปลี่ยนแปลง</h3>
+<p>หากนโยบายนี้มีการเปลี่ยนแปลง เวอร์ชันใหม่จะถูกเผยแพร่ที่ URL นี้พร้อมวันที่มีผลบังคับใช้ที่อัปเดต</p>
+
+<h3>9. ติดต่อ</h3>
+<p>คำถามหรือคำขอ: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ VIETNAMESE ============ -->
+<h2 id="vi">Tiếng Việt</h2>
+
+<p><strong>Tóm tắt trong một câu:</strong> ImFine hoạt động hoàn toàn trên thiết bị của bạn. Các liên hệ khẩn cấp, bản ghi điểm danh và cài đặt của bạn không bao giờ đến được nhà phát triển — chúng được lưu trữ mã hóa trên điện thoại của bạn và <em>chỉ được gửi bởi bạn, thông qua các kênh của riêng bạn</em> (tài khoản email của bạn, khóa API email của bạn, SMS của bạn, hoặc webhook bot nhóm của riêng bạn).</p>
+
+<h3>1. Chúng tôi là ai</h3>
+<p>ImFine ("Ứng dụng") được phát triển và vận hành như một sản phẩm phần mềm độc lập. Đối với các câu hỏi về quyền riêng tư, vui lòng liên hệ: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Dữ liệu chúng tôi KHÔNG thu thập</h3>
+<ul>
+  <li>Chúng tôi không vận hành bất kỳ máy chủ nào lưu trữ dữ liệu của bạn.</li>
+  <li>Chúng tôi không thu thập, truyền, bán hoặc chia sẻ dữ liệu cá nhân, danh bạ, lịch sử điểm danh hoặc vị trí của bạn.</li>
+  <li>Chúng tôi không có SDK quảng cáo và không có SDK phân tích/theo dõi.</li>
+</ul>
+
+<h3>3. Dữ liệu được lưu trữ trên thiết bị của bạn</h3>
+<p>Dữ liệu sau đây chỉ nằm trên thiết bị của bạn và được mã hóa khi lưu trữ:</p>
+<ul>
+  <li><strong>Liên hệ khẩn cấp</strong> (tên, email/số điện thoại được che mà bạn nhập) — được lưu trong cơ sở dữ liệu mã hóa AES-256 (SQLCipher).</li>
+  <li><strong>Cài đặt và mẫu tin nhắn</strong> — được lưu trong bộ lưu trữ mã hóa được hỗ trợ bởi Android Keystore (EncryptedSharedPreferences).</li>
+  <li><strong>Bản ghi điểm danh và lịch sử cảnh báo</strong> — được lưu cục bộ.</li>
+  <li><strong>Các khóa API tùy chọn</strong> (ví dụ: khóa API email Resend.com hoặc khóa đẩy bạn chọn lưu) — được lưu mã hóa trên thiết bị và chỉ được sử dụng để gửi cảnh báo đến <em>người nhận mà bạn đã chọn</em>.</li>
+</ul>
+<p>Bạn có thể xóa tất cả dữ liệu bất cứ lúc nào thông qua <em>Cài đặt → Quyền riêng tư &amp; tuyên bố miễn trừ trách nhiệm → Xóa tất cả dữ liệu của tôi</em>, hoặc bằng cách gỡ cài đặt Ứng dụng.</p>
+
+<h3>4. Dữ liệu do bạn gửi, thông qua các tài khoản của riêng bạn</h3>
+<p>Khi một cảnh báo được kích hoạt, Ứng dụng sẽ soạn và gửi tin nhắn bằng các kênh mà <em>bạn</em> đã cấu hình. Nhà phát triển không bao giờ nhìn thấy lưu lượng này:</p>
+<ul>
+  <li><strong>Email thông qua ứng dụng email trên thiết bị của bạn</strong>: luồng email tiêu chuẩn của thiết bị, bị chi phối bởi chính sách quyền riêng tư của nhà cung cấp email của bạn.</li>
+  <li><strong>Email thông qua Resend (tùy chọn)</strong>: tin nhắn được gửi từ tài khoản Resend của riêng bạn bằng khóa API của riêng bạn, đến người nhận mà bạn đã nhập. Resend xử lý việc truyền này theo <a href="https://resend.com/privacy">chính sách quyền riêng tư của Resend</a>.</li>
+  <li><strong>SMS (tùy chọn, Pro)</strong>: được gửi bởi thiết bị và nhà mạng của bạn như thể bạn tự gửi.</li>
+  <li><strong>Webhook bot nhóm (tùy chọn, Pro)</strong>: tin nhắn đi trực tiếp đến URL webhook mà bạn đã cấu hình (ví dụ: tích hợp bot của riêng bạn).</li>
+</ul>
+<p>Người nhận của cảnh báo là những người bạn đã thêm rõ ràng làm liên hệ khẩn cấp. Hãy đảm bảo rằng họ mong đợi nhận được những tin nhắn như vậy.</p>
+
+<h3>5. Quyền</h3>
+<ul>
+  <li><strong>Internet</strong> — cần thiết để gửi email/webhook cảnh báo thông qua các kênh bạn đã cấu hình.</li>
+  <li><strong>Thông báo</strong> — lời nhắc điểm danh và xác nhận cảnh báo.</li>
+  <li><strong>Báo thức và lời nhắc (báo thức chính xác)</strong> — để lời nhắc điểm danh kích hoạt vào thời điểm đã cấu hình.</li>
+  <li><strong>SMS (tùy chọn)</strong> — chỉ khi bạn bật tính năng gửi SMS.</li>
+</ul>
+
+<h3>6. Mua hàng</h3>
+<p>Các đăng ký và mua một lần được xử lý hoàn toàn bởi <strong>Google Play Payments</strong>. Nhà phát triển không nhận hoặc lưu trữ thông tin thanh toán của bạn. Google xử lý dữ liệu mua hàng của bạn theo <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>. Ứng dụng xác minh trạng thái mua hàng của bạn với Google Play chỉ để mở khóa các tính năng Pro (và khóa lại nếu mua hàng bị hoàn tiền hoặc hủy).</p>
+
+<h3>7. Trẻ em</h3>
+<p>Ứng dụng không dành cho trẻ em dưới 13 tuổi và không cố ý thu thập dữ liệu từ bất kỳ ai, bao gồm trẻ em.</p>
+
+<h3>8. Thay đổi</h3>
+<p>Nếu chính sách này thay đổi, phiên bản mới sẽ được xuất bản tại URL này với ngày có hiệu lực được cập nhật.</p>
+
+<h3>9. Liên hệ</h3>
+<p>Câu hỏi hoặc yêu cầu: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ URDU ============ -->
+<h2 id="ur">اردو</h2>
+
+<p><strong>ایک جملے میں خلاصہ:</strong> ImFine بالکل آپ کے ڈیوائس پر کام کرتا ہے۔ آپ کے ایمرجنسی رابطے، چیک ان ریکارڈز اور سیٹنگز کبھی ڈیولپر تک نہیں پہنچتے — یہ آپ کے فون پر انکرپٹڈ محفوظ ہیں اور <em>صرف آپ کی طرف سے، آپ کے اپنے چینلز</em> (آپ کا ای میل اکاؤنٹ، آپ کا ای میل API کلید، آپ کا SMS، یا آپ کے اپنے گروپ باٹ ویب ہوکس) کے ذریعے بھیجے جاتے ہیں۔</p>
+
+<h3>1. ہم کون ہیں</h3>
+<p>ImFine ("ایپ") ایک آزاد سافٹ ویئر پروڈکٹ کے طور پر تیار اور چلایا جاتا ہے۔ رازداری سے متعلق سوالات کے لیے، رابطہ کریں: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. ڈیٹا جو ہم جمع نہیں کرتے</h3>
+<ul>
+  <li>ہم کوئی ایسا سرور نہیں چلاتے جو آپ کا ڈیٹا محفوظ کرتا ہو۔</li>
+  <li>ہم آپ کا ذاتی ڈیٹا، رابطے، چیک ان ہسٹری یا مقام جمع، منتقل، فروخت یا شیئر نہیں کرتے۔</li>
+  <li>ہمارے پاس کوئی اشتہاری SDK یا تجزیاتی/ٹریکنگ SDK نہیں ہے۔</li>
+</ul>
+
+<h3>3. آپ کے ڈیوائس پر محفوظ ڈیٹا</h3>
+<p>مندرجہ ذیل صرف آپ کے ڈیوائس پر رہتا ہے اور سکن میں انکرپٹڈ ہے:</p>
+<ul>
+  <li><strong>ایمرجنسی رابطے</strong> (نام، ماسک شدہ ای میلز/فونز جو آپ داخل کرتے ہیں) — AES-256 انکرپٹڈ ڈیٹابیس (SQLCipher) میں محفوظ۔</li>
+  <li><strong>سیٹنگز اور پیغام ٹیمپلیٹس</strong> — Android Keystore سے مدد حاصل کردہ انکرپٹڈ اسٹوریج (EncryptedSharedPreferences) میں محفوظ۔</li>
+  <li><strong>چیک ان ریکارڈز اور الرٹ ہسٹری</strong> — مقامی طور پر محفوظ۔</li>
+  <li><strong>اختیاری API کلیدز</strong> (جیسے Resend.com ای میل API کلید، یا پش کلیدز جو آپ محفوظ کرنا چاہتے ہیں) — ڈیوائس پر انکرپٹڈ محفوظ اور صرف آپ کے منتخب کردہ وصول کنندگان کو الرٹ بھیجنے کے لیے استعمال ہوتی ہیں۔</li>
+</ul>
+<p>آپ اس کے تمام کو ہر وقت <em>سیٹنگز → رازداری اور دستبرداری → میرا تمام ڈیٹا حذف کریں</em> کے ذریعے حذف کر سکتے ہیں، یا ایپ کو ان انسٹال کر کے۔</p>
+
+<h3>4. آپ کی طرف سے، آپ کے اپنے اکاؤنٹس کے ذریعے بھیجا گیا ڈیٹا</h3>
+<p>جب الرٹ متحرک ہوتا ہے، ایپ <em>آپ کے</em> کنفیگر کردہ چینلز کا استعمال کرتے ہوئے ایک پیغام تیار اور بھیجتی ہے۔ ڈیولپر اس ٹریفک کو کبھی نہیں دیکھتا:</p>
+<ul>
+  <li><strong>آپ کے ڈیوائس میل ایپ کے ذریعے ای میل</strong>: آپ کے ڈیوائس کا معیاری ای میل بہاو، جو آپ کے ای میل فراہم کنندہ کی رازداری پالیسی کے تابع ہے۔</li>
+  <li><strong>Resend کے ذریعے ای میل (اختیاری)</strong>: پیغام آپ کے اپنے Resend اکاؤنٹ سے آپ کی اپنی API کلید کا استعمال کرتے ہوئے، آپ کے داخل کردہ وصول کنندگان کو بھیجا جاتا ہے۔ Resend اس ترسیل کو <a href="https://resend.com/privacy">Resend کی رازداری پالیسی</a> کے تحت پروسیس کرتا ہے۔</li>
+  <li><strong>SMS (اختیاری، Pro)</strong>: آپ کے ڈیوائس اور کیرئیر کے ذریعے بھیجا گیا، جیسے آپ نے خود بھیجا ہو۔</li>
+  <li><strong>گروپ باٹ ویب ہوکس (اختیاری، Pro)</strong>: پیغامات براہ راست آپ کے کنفیگر کردہ ویب ہوک URLز (جیسے آپ کی اپنی باٹ انٹیگریشن) پر جاتے ہیں۔</li>
+</ul>
+<p>الرٹس کے وصول کنندگان وہ لوگ ہیں جنہیں آپ نے واضح طور پر ایمرجنسی رابطے کے طور پر شامل کیا ہے۔ یقین کر لیں کہ وہ ایسے پیغامات وصول کرنے کی توقع رکھتے ہیں۔</p>
+
+<h3>5. اجازتیں</h3>
+<ul>
+  <li><strong>انٹرنیٹ</strong> — آپ کے کنفیگر کردہ چینلز کے ذریعے الرٹ ای میلز/ویب ہوکس بھیجنے کے لیے ضروری۔</li>
+  <li><strong>اطلاعات</strong> — چیک ان یاد دہانیاں اور الرٹ تصدیقات۔</li>
+  <li><strong>الارمز اور یاد دہانیاں (عین الارم)</strong> — تاکہ چیک ان یاد دہانیاں کنفیگر کردہ وقت پر متحرک ہوں۔</li>
+  <li><strong>SMS (اختیاری)</strong> — صرف اگر آپ SMS ترسیل فعال کریں۔</li>
+</ul>
+
+<h3>6. خریداریاں</h3>
+<p>سبسکرپشنز اور ون ٹائم خریداریاں بالکل <strong>Google Play Payments</strong> کے ذریعے پروسیس کی جاتی ہیں۔ ڈیولپر آپ کی ادائیگی کی تفصیلات وصول یا محفوظ نہیں کرتا۔ Google آپ کے خریداری ڈیٹا کو <a href="https://policies.google.com/privacy">Google رازداری پالیسی</a> کے تحت ہینڈل کرتا ہے۔ ایپ Pro فیچرز کو ان لاک کرنے کے لیے (اور خریداری واپس یا منسوخ ہونے پر دوبارہ لاک کرنے کے لیے) Google Play کے ساتھ آپ کی خریداری حیثیت کی تصدیق کرتی ہے۔</p>
+
+<h3>7. بچے</h3>
+<p>ایپ 13 سال سے کم عمر بچوں کے لیے مخصوص نہیں ہے اور کسی سے بھی، بشمول بچے، جان بوجھ کر ڈیٹا جمع نہیں کرتی۔</p>
+
+<h3>8. تبدیلیاں</h3>
+<p>اگر یہ پالیسی تبدیل ہوتی ہے، تو نیا ورژن اس URL پر اپ ڈیٹڈ افیکٹتاریخ کے ساتھ شائع کیا جائے گا۔</p>
+
+<h3>9. رابطہ</h3>
+<p>سوالات یا درخواستیں: <strong>jamesxu1026@gmail.com</strong>.</p>
 
 </body>
 </html>
