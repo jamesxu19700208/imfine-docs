@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImFine — Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; line-height: 1.65; color: #1a1a1a; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 2em; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  .meta { color: #666; font-size: 0.9rem; }
+  .lang-switch { margin: 16px 0; }
+  .lang-switch a { margin-right: 12px; color: #0a66c2; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>ImFine — Privacy Policy</h1>
+<p class="meta">Effective date: October 7, 2026 &nbsp;|&nbsp; App: ImFine (com.imfine.app)</p>
+<div class="lang-switch"><a href="#en">English</a><a href="#zh">简体中文</a></div>
+
+<!-- ============ ENGLISH ============ -->
+<h2 id="en">English</h2>
+
+<p><strong>Summary in one sentence:</strong> ImFine works entirely on your device. Your emergency contacts, check-in records and settings never reach the developer — they are stored encrypted on your phone and are sent <em>only by you, through your own channels</em> (your email account, your email API key, your SMS, or your own group-bot webhooks).</p>
+
+<h3>1. Who we are</h3>
+<p>ImFine ("the App") is developed and operated as an independent software product. For privacy questions, contact: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<h3>2. Data we do NOT collect</h3>
+<ul>
+  <li>We do not operate any server that stores your data.</li>
+  <li>We do not collect, transmit, sell or share your personal data, contacts, check-in history or location.</li>
+  <li>We have no advertising SDKs and no analytics/tracking SDKs.</li>
+</ul>
+
+<h3>3. Data stored on your device</h3>
+<p>The following stays on your device only, and is encrypted at rest:</p>
+<ul>
+  <li><strong>Emergency contacts</strong> (names, masked emails/phones you enter) — stored in an AES-256 encrypted database (SQLCipher).</li>
+  <li><strong>Settings and message templates</strong> — stored in Android Keystore-backed encrypted storage (EncryptedSharedPreferences).</li>
+  <li><strong>Check-in records and alert history</strong> — stored locally.</li>
+  <li><strong>Optional API keys</strong> (e.g., a Resend.com email API key, or push keys you choose to save) — stored encrypted on-device and used only to send alerts to <em>your chosen recipients</em>.</li>
+</ul>
+<p>You can delete all of it at any time via <em>Settings → Privacy &amp; disclaimer → Delete all my data</em>, or by uninstalling the App.</p>
+
+<h3>4. Data sent by you, through your own accounts</h3>
+<p>When an alert is triggered, the App composes and sends a message using channels <em>you</em> configured. The developer never sees this traffic:</p>
+<ul>
+  <li><strong>Email via your device mail app</strong>: your device's standard email flow, governed by your email provider's privacy policy.</li>
+  <li><strong>Email via Resend (optional)</strong>: the message is sent from your own Resend account using your own API key, to recipients you entered. Resend processes this transmission under <a href="https://resend.com/privacy">Resend's privacy policy</a>.</li>
+  <li><strong>SMS (optional, Pro)</strong>: sent by your device and carrier as if you sent it yourself.</li>
+  <li><strong>Group-bot webhooks (optional, Pro)</strong>: messages go directly to the webhook URLs you configured (e.g., your own bot integration).</li>
+</ul>
+<p>The recipients of alerts are people you explicitly added as emergency contacts. Make sure they expect to receive such messages.</p>
+
+<h3>5. Permissions</h3>
+<ul>
+  <li><strong>Internet</strong> — required to send alert emails/webhooks through your configured channels.</li>
+  <li><strong>Notifications</strong> — check-in reminders and alert confirmations.</li>
+  <li><strong>Alarms &amp; reminders (exact alarm)</strong> — so check-in reminders fire at the configured time.</li>
+  <li><strong>SMS (optional)</strong> — only if you enable SMS delivery.</li>
+</ul>
+
+<h3>6. Purchases</h3>
+<p>Subscriptions and one-time purchases are processed entirely by <strong>Google Play Payments</strong>. The developer does not receive or store your payment details. Google handles your purchase data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The App verifies your purchase status with Google Play solely to unlock Pro features (and to lock them again if a purchase is refunded or cancelled).</p>
+
+<h3>7. Children</h3>
+<p>The App is not directed at children under 13 and does not knowingly collect any data from anyone, including children.</p>
+
+<h3>8. Changes</h3>
+<p>If this policy changes, the new version will be published at this URL with an updated effective date.</p>
+
+<h3>9. Contact</h3>
+<p>Questions or requests: <strong>jamesxu1026@gmail.com</strong>.</p>
+
+<!-- ============ CHINESE ============ -->
+<h2 id="zh">简体中文</h2>
+
+<p><strong>一句话总结：</strong>ImFine 完全在你的手机上运行。你的紧急联系人、签到记录与设置永远不会到达开发者——它们加密存储在你的设备上，并且只由你通过你自己的渠道（你的邮箱、你的邮件 API 密钥、你的短信、你自己的群机器人 Webhook）发出。</p>
+
+<h3>1. 我们是谁</h3>
+<p>ImFine（"本应用"）为独立开发的软件产品。隐私相关问题请联系：<strong>jamesxu1026@gmail.com</strong>。</p>
+
+<h3>2. 我们不收集的数据</h3>
+<ul>
+  <li>我们不运营任何存储你数据的服务器。</li>
+  <li>我们不收集、传输、出售或共享你的个人数据、联系人、签到记录或位置。</li>
+  <li>本应用不含广告 SDK，也不含统计/追踪 SDK。</li>
+</ul>
+
+<h3>3. 存储在你设备上的数据</h3>
+<p>以下数据仅保存在你的设备上，并已加密：</p>
+<ul>
+  <li><strong>紧急联系人</strong>（你填写的姓名、邮箱/电话）——存储于 AES-256 加密数据库（SQLCipher）。</li>
+  <li><strong>设置与消息模板</strong>——存储于 Android Keystore 加密的本地存储（EncryptedSharedPreferences）。</li>
+  <li><strong>签到记录与提醒历史</strong>——本地存储。</li>
+  <li><strong>可选的 API 密钥</strong>（如 Resend 邮件 API 密钥、推送密钥）——加密保存在设备上，仅用于向你指定的收件人发送提醒。</li>
+</ul>
+<p>你可以随时通过「设置 → 隐私与免责声明 → 删除我的全部数据」删除全部数据，或直接卸载应用。</p>
+
+<h3>4. 由你通过自己的账户发送的数据</h3>
+<p>触发提醒时，本应用使用<em>你</em>配置的渠道发送消息，开发者无法看到这些流量：</p>
+<ul>
+  <li><strong>通过设备邮件应用发送</strong>：使用系统标准邮件流程，受你的邮件服务商隐私政策约束。</li>
+  <li><strong>通过 Resend 发送（可选）</strong>：使用你自己的 Resend 账户与 API 密钥发送到你指定的收件人，传输过程受 <a href="https://resend.com/privacy">Resend 隐私政策</a>约束。</li>
+  <li><strong>短信（可选，专业版）</strong>：由你的设备与运营商发出，等同于你本人发送。</li>
+  <li><strong>群机器人 Webhook（可选，专业版）</strong>：消息直接发送到你配置的 Webhook 地址。</li>
+</ul>
+<p>提醒的接收者是你主动添加的紧急联系人，请确保对方知情并愿意接收此类消息。</p>
+
+<h3>5. 权限说明</h3>
+<ul>
+  <li><strong>网络</strong>——通过你配置的渠道发送提醒邮件/Webhook。</li>
+  <li><strong>通知</strong>——签到提醒与警报确认。</li>
+  <li><strong>精确闹钟</strong>——保证签到提醒在设定时间触发。</li>
+  <li><strong>短信（可选）</strong>——仅在你启用短信发送时使用。</li>
+</ul>
+
+<h3>6. 内购</h3>
+<p>订阅与一次性购买完全由 <strong>Google Play 支付</strong>处理，开发者不会收到或存储你的支付信息，相关数据由 Google 按 <a href="https://policies.google.com/privacy">Google 隐私政策</a>处理。本应用仅向 Google Play 查询购买状态，用于解锁专业版功能（以及退款/取消订阅后重新锁定）。</p>
+
+<h3>7. 儿童</h3>
+<p>本应用不面向 13 岁以下儿童，也不收集任何人（包括儿童）的数据。</p>
+
+<h3>8. 政策变更</h3>
+<p>如本政策发生变化，新版本将在本页面发布并更新生效日期。</p>
+
+<h3>9. 联系方式</h3>
+<p>如有问题或请求：<strong>jamesxu1026@gmail.com</strong>。</p>
+
+</body>
+</html>
